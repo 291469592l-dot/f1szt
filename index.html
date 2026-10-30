@@ -1,0 +1,2322 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S1 Maths · First Term Test 2026 中英逐題拆解報告</title>
+<style>
+:root{
+  --paper:#f6f3ec;
+  --card:#fffdf8;
+  --ink:#1b2733;
+  --ink-soft:#46586a;
+  --ink-faint:#7d8b98;
+  --rule:#e4dccf;
+  --amber:#a86f18;
+  --amber-soft:#f6ebd6;
+  --red:#a3302a;
+  --red-soft:#fae6e3;
+  --green:#26624a;
+  --green-soft:#e2efe7;
+  --blue:#25536f;
+  --blue-soft:#e2edf3;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Songti SC","PingFang TC","Microsoft JhengHei",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Hiragino Sans GB","Microsoft JhengHei","Microsoft YaHei",sans-serif;
+  --mono:ui-monospace,"SFMono-Regular","SF Mono",Consolas,"Courier New",monospace;
+  --shadow:0 1px 2px rgba(27,39,51,.05),0 8px 24px -12px rgba(27,39,51,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(1200px 600px at 12% -8%, #fffdf8 0%, transparent 60%),
+    radial-gradient(900px 500px at 92% 4%, #f2ece0 0%, transparent 55%);
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px;position:relative;z-index:1}
+
+/* ---------- HERO ---------- */
+.hero{padding:54px 0 34px;border-bottom:1px solid var(--rule)}
+.school{
+  font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-faint);font-family:var(--serif);margin:0 0 18px
+}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:34px;align-items:center}
+h1{
+  font-family:var(--serif);font-size:clamp(28px,4.4vw,46px);line-height:1.16;
+  margin:0 0 6px;font-weight:600;letter-spacing:-.01em
+}
+h1 .zh{display:block;font-family:var(--sans);font-size:clamp(15px,2.1vw,20px);
+  font-weight:500;color:var(--ink-soft);letter-spacing:.04em;margin-top:12px}
+.hero-sub{margin:16px 0 0;color:var(--ink-soft);font-size:14.5px}
+.hero-sub b{color:var(--ink)}
+.score-ring{position:relative;width:168px;height:168px;flex:none}
+.score-ring svg{transform:rotate(-90deg)}
+.score-ring .inner{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center
+}
+.score-ring .num{font-family:var(--serif);font-size:44px;line-height:1;font-weight:600}
+.score-ring .tot{font-size:12px;color:var(--ink-faint);letter-spacing:.08em;margin-top:5px}
+.verdict{
+  margin-top:26px;padding:18px 22px;background:var(--amber-soft);
+  border-left:4px solid var(--amber);border-radius:0 8px 8px 0;font-size:15px
+}
+.verdict b{color:#7d5210;display:block;margin-bottom:5px;font-size:13px;letter-spacing:.05em;text-transform:uppercase}
+
+/* ---------- NAV ---------- */
+nav.toc{
+  position:sticky;top:0;z-index:50;background:rgba(246,243,236,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)
+}
+nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding:9px 22px;scrollbar-width:none}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{
+  flex:none;font-size:13px;color:var(--ink-soft);text-decoration:none;
+  padding:6px 11px;border-radius:99px;white-space:nowrap;transition:.18s
+}
+nav.toc a:hover{background:#ece5d8;color:var(--ink)}
+nav.toc a.on{background:var(--ink);color:#faf7f0}
+
+/* ---------- SECTIONS ---------- */
+section{padding:52px 0 8px}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 6px;flex-wrap:wrap}
+.sec-num{
+  font-family:var(--serif);font-size:12px;letter-spacing:.2em;color:var(--amber);
+  border:1px solid var(--amber);border-radius:4px;padding:2px 7px;line-height:1.5
+}
+h2{font-family:var(--serif);font-size:clamp(21px,3vw,30px);margin:0;font-weight:600;letter-spacing:-.01em}
+.sec-desc{color:var(--ink-faint);font-size:13.5px;margin:2px 0 26px}
+
+h3{font-family:var(--serif);font-size:19px;margin:38px 0 12px;font-weight:600}
+h4{margin:0 0 8px;font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+
+/* ---------- CARDS & BOXES ---------- */
+.card{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:20px 22px;box-shadow:var(--shadow)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}.hero-grid{grid-template-columns:1fr}.score-ring{margin-top:8px}}
+
+.box{border-radius:10px;padding:14px 16px;font-size:14.5px;line-height:1.7}
+.box h4{margin-bottom:7px}
+.box-key{background:var(--amber-soft)}
+.box-key h4{color:#8a5c11}
+.box-work{background:var(--blue-soft)}
+.box-work h4{color:var(--blue)}
+.box-bad{background:var(--red-soft)}
+.box-bad h4{color:var(--red)}
+.box-good{background:var(--green-soft)}
+.box-good h4{color:var(--green)}
+.box-en{background:#f0ede4}
+.box-en h4{color:#6b5a3e}
+.box ul{margin:0;padding-left:1.15em}
+.box li{margin:3px 0}
+
+/* ---------- TABLE ---------- */
+table{width:100%;border-collapse:collapse;font-size:14px;background:var(--card);
+  border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+th{background:#efe9dc;text-align:left;padding:10px 12px;font-size:12px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+td{padding:9px 12px;border-top:1px solid var(--rule);vertical-align:top}
+td.n,th.n{text-align:center;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.hi td{background:#fdf6e8}
+.tbl-scroll{overflow-x:auto;border-radius:10px}
+.pctbar{display:inline-block;height:7px;border-radius:99px;background:#e2dbcf;width:74px;vertical-align:middle;overflow:hidden;margin-left:6px}
+.pctbar i{display:block;height:100%;border-radius:99px;background:var(--amber)}
+.pctbar.low i{background:var(--red)}
+.pctbar.mid i{background:var(--amber)}
+.pctbar.high i{background:var(--green)}
+
+/* ---------- QUESTION CARD ---------- */
+.q{background:var(--card);border:1px solid var(--rule);border-radius:12px;
+  padding:18px 20px;margin:0 0 16px;box-shadow:var(--shadow);position:relative}
+.q::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;
+  border-radius:0 3px 3px 0;background:var(--rule)}
+.q[data-status="bad"]::before{background:var(--red)}
+.q[data-status="good"]::before{background:var(--green)}
+.q[data-status="half"]::before{background:var(--amber)}
+.q-head{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-bottom:12px}
+.qno{width:31px;height:31px;flex:none;border-radius:50%;background:var(--ink);color:#faf7f0;
+  display:grid;place-items:center;font-family:var(--serif);font-size:14px;font-weight:600}
+.q[data-status="bad"] .qno{background:var(--red)}
+.q[data-status="good"] .qno{background:var(--green)}
+.q[data-status="half"] .qno{background:var(--amber)}
+.tag{font-size:11.5px;padding:3px 9px;border-radius:99px;letter-spacing:.03em;
+  border:1px solid transparent;white-space:nowrap}
+.tag-topic{background:#eeeadf;color:var(--ink-soft);border-color:#e0d8c8}
+.tag-bad{background:var(--red-soft);color:var(--red)}
+.tag-good{background:var(--green-soft);color:var(--green)}
+.tag-half{background:var(--amber-soft);color:var(--amber)}
+.tag-m{background:#eee;color:#555;font-variant-numeric:tabular-nums}
+
+.q-en{font-family:var(--serif);font-size:16.5px;line-height:1.68;margin:6px 0 8px;color:#14202b}
+.q-zh{font-size:14.5px;color:var(--ink-soft);margin:0 0 14px;padding-left:12px;
+  border-left:2px solid var(--amber)}
+.opts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 14px;font-family:var(--serif);font-size:15px}
+.opts.wide{grid-template-columns:repeat(auto-fit,minmax(185px,1fr))}
+.opts div{background:#f2eee5;border-radius:7px;padding:7px 10px;border:1px solid #e6dcc9}
+.opts div.ans{background:var(--green-soft);border-color:#bcd9c9;font-weight:600}
+@media(max-width:720px){.opts,.opts.wide{grid-template-columns:1fr 1fr}}
+
+.math{font-family:var(--serif);font-style:italic}
+.calc{font-family:var(--mono);font-size:14px;line-height:1.95;background:#f4f1ea;
+  border-radius:8px;padding:12px 14px;overflow-x:auto;white-space:pre-wrap;color:#243141}
+.strike{color:var(--red);text-decoration:line-through;text-decoration-thickness:2px}
+.mk{background:linear-gradient(180deg,transparent 58%,#f7dfa8 58%);padding:0 1px}
+.final{color:var(--green);font-weight:700}
+.dim{color:var(--ink-faint);font-size:13.5px}
+hr.soft{border:0;border-top:1px dashed var(--rule);margin:16px 0}
+
+.box-half{background:var(--amber-soft)}
+.box-half h4{color:var(--amber)}
+.day{min-width:64px;text-align:center;font-variant-numeric:tabular-nums}
+
+/* ---------- vocab ---------- */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:10px}
+.v{background:var(--card);border:1px solid var(--rule);border-radius:9px;padding:11px 13px;font-size:14px}
+.v b{font-family:var(--serif);font-size:15px;display:block;color:#16232e}
+.v span{color:var(--ink-soft);display:block;font-size:13.5px;margin-top:2px}
+.v code{font-family:var(--mono);font-size:12.5px;background:#f1ece1;padding:1px 5px;border-radius:4px;color:#6b4a12}
+
+.frame{background:var(--card);border:1px solid var(--rule);border-radius:9px;padding:12px 15px;margin:0 0 10px}
+.frame .e{font-family:var(--serif);font-size:15px;color:#16232e}
+.frame .c{font-size:13.5px;color:var(--ink-soft);margin-top:3px}
+
+/* ---------- checklist ---------- */
+.check{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:9px;
+  background:var(--card);border:1px solid var(--rule);margin-bottom:8px;cursor:pointer;transition:.15s}
+.check:hover{border-color:#d3c7ae}
+.check input{margin:5px 0 0;accent-color:var(--green);width:16px;height:16px;flex:none}
+.check span{font-size:14.5px;line-height:1.6}
+.check.done span{color:var(--ink-faint);text-decoration:line-through}
+
+/* ---------- exam rules ---------- */
+.rule-card{background:var(--card);border:1px solid var(--rule);border-radius:11px;padding:16px 18px;box-shadow:var(--shadow)}
+.rule-card .n{font-family:var(--serif);font-size:26px;color:var(--amber);line-height:1;margin-bottom:6px}
+
+/* ---------- quiz ---------- */
+.quiz{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+.quiz-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.qscore{font-family:var(--serif);font-size:14px;color:var(--ink-soft)}
+.qscore b{color:var(--ink);font-size:17px}
+.qbody .stem{font-family:var(--serif);font-size:19px;margin:0 0 4px}
+.qbody .stemzh{font-size:13.5px;color:var(--ink-faint);margin:0 0 16px}
+.choices{display:grid;gap:9px}
+.choice{
+  text-align:left;font-family:var(--serif);font-size:16px;padding:11px 15px;border-radius:9px;
+  border:1px solid var(--rule);background:#faf8f3;cursor:pointer;transition:.15s;color:var(--ink)
+}
+.choice:hover:not(:disabled){border-color:var(--amber);background:#fdf6e8}
+.choice:disabled{cursor:default}
+.choice.right{background:var(--green-soft);border-color:#9dc7b0;color:#164a34}
+.choice.wrong{background:var(--red-soft);border-color:#dda9a2;color:#7d2019}
+.fb{margin-top:14px;padding:12px 15px;border-radius:9px;font-size:14.5px;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--green-soft);color:#164a34}
+.fb.no{background:var(--red-soft);color:#7d2019}
+.btn{
+  font-family:var(--sans);font-size:14px;padding:9px 18px;border-radius:99px;border:1px solid var(--ink);
+  background:var(--ink);color:#faf7f0;cursor:pointer;transition:.15s
+}
+.btn:hover{background:#2c3b4c}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:#ece5d8}
+
+/* ---------- misc ---------- */
+.callout{border-radius:10px;padding:15px 18px;margin:16px 0;font-size:14.5px;
+  background:var(--blue-soft);border-left:3px solid var(--blue)}
+.callout.warn{background:var(--red-soft);border-left-color:var(--red)}
+.callout.tip{background:var(--green-soft);border-left-color:var(--green)}
+.callout b{display:block;margin-bottom:5px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+
+footer{margin-top:60px;padding:30px 0 60px;border-top:1px solid var(--rule);
+  font-size:13px;color:var(--ink-faint)}
+
+.filterbar{display:flex;gap:8px;margin:0 0 18px;flex-wrap:wrap;align-items:center}
+.chip{font-size:13px;padding:6px 14px;border-radius:99px;border:1px solid var(--rule);
+  background:var(--card);cursor:pointer;transition:.15s;color:var(--ink-soft)}
+.chip:hover{border-color:#c9bda3}
+.chip.on{background:var(--ink);color:#faf7f0;border-color:var(--ink)}
+.hide{display:none !important}
+
+@media print{
+  body{background:#fff}
+  nav.toc,.filterbar,.btn{display:none}
+  .q,.card,table{box-shadow:none;break-inside:avoid}
+  section{padding:20px 0 4px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="school">T.W.G.Hs Sun Hoi Directors' College &nbsp;·&nbsp; 東華三院辛亥年總理中學 &nbsp;·&nbsp; Secondary One Mathematics</p>
+    <div class="hero-grid">
+      <div>
+        <h1>First Term Test 2026–2027<br>逐題中英拆解報告
+          <span class="zh">Question-by-Question Breakdown · Bilingual (English / 中文) Study Report</span>
+        </h1>
+        <p class="hero-sub">
+          考試日期 <b>2026 年 10 月 20 日</b> &nbsp;·&nbsp; 時限 <b>1 小時 30 分</b> &nbsp;·&nbsp; 滿分 <b>100 分</b>
+          &nbsp;·&nbsp; 全卷 <b>3 部分</b>（A 選擇題 34 分 / B 短題 44 分 / C 長題 22 分）
+        </p>
+        <p class="hero-sub">本報告逐題對照英文原文、中文翻譯、關鍵詞、完整解法、你的卷面作答與錯因，最後給出「接下來要補的知識點 + 必背英文表達 + 六週補底計劃」。</p>
+      </div>
+      <div class="score-ring" aria-label="得分 38 分 / 100 分">
+        <svg width="168" height="168" viewBox="0 0 168 168">
+          <circle cx="84" cy="84" r="72" fill="none" stroke="#e6ded0" stroke-width="12"/>
+          <circle cx="84" cy="84" r="72" fill="none" stroke="#a3302a" stroke-width="12"
+                  stroke-linecap="round" stroke-dasharray="452.4" stroke-dashoffset="280.5"/>
+        </svg>
+        <div class="inner">
+          <div class="num">38</div>
+          <div class="tot">/ 100</div>
+        </div>
+      </div>
+    </div>
+    <div class="verdict">
+      <b>一句話診斷 · One-line diagnosis</b>
+      你的<strong>「看的懂、算不錯」但「寫不對地方、答不到點」</strong>。真正的數學能力大約有 55–60 分的水平，
+      但有約 <strong>18–20 分</strong> 是白白丟掉的：正確答案寫在試卷邊邊、寫在橫線外面、
+      或者寫了兩個答案讓老師混淆。<br>
+      <span class="dim">You can do the maths. You are losing marks on <em>presentation, notation and English word problems</em> — not on concepts.</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#overview" class="on">① 成績總覽</a>
+    <a href="#diagnosis">② 失分地圖</a>
+    <a href="#paper">③ 逐題拆解</a>
+    <a href="#vocab">④ 英文表達庫</a>
+    <a href="#skills">⑤ 知識點補強</a>
+    <a href="#plan">⑥ 六週計劃</a>
+    <a href="#examrule">⑦ 答題規範</a>
+    <a href="#extra">⑧ 額外建議</a>
+    <a href="#quiz">⑨ 自測 20 題</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ================= 1. OVERVIEW ================= -->
+<section id="overview">
+  <div class="sec-head"><span class="sec-num">01</span><h2>成績總覽 · Score Overview</h2></div>
+  <p class="sec-desc">全卷 100 分，得 38 分（38%）。以下分數是根據卷面紅筆逐題讀出；Section A 的答案寫在另交的答案紙上，卷面沒有分數，是按總分倒推的估計值。</p>
+
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr>
+      <th>部分 Section</th><th>題型 Question type</th><th class="n">滿分</th><th class="n">得分</th><th class="n">得分率</th><th>說明 Note</th>
+    </tr></thead>
+    <tbody>
+      <tr><td><b>A</b></td><td>Multiple-Choice Questions 選擇題（Q1–Q17，每題 2 分）</td><td class="n">34</td><td class="n">約 18–20</td><td class="n">≈55% <span class="pctbar mid"><i style="width:55%"></i></span></td><td>答案紙未附於本影印本；由 38 分總分倒推</td></tr>
+      <tr><td><b>B</b></td><td>Short Questions 短題（Q18–Q26）</td><td class="n">44</td><td class="n">14–15</td><td class="n">≈33% <span class="pctbar low"><i style="width:33%"></i></span></td><td>最大失分區</td></tr>
+      <tr><td><b>C</b></td><td>Long Questions 長題（Q27–Q29）</td><td class="n">22</td><td class="n">5</td><td class="n">≈23% <span class="pctbar low"><i style="width:23%"></i></span></td><td>長題的表達與完整推理是弱項</td></tr>
+      <tr class="hi"><td colspan="2"><b>合計 Total</b></td><td class="n"><b>100</b></td><td class="n"><b>38</b></td><td class="n"><b>38%</b></td><td>合格線 50 分，差 <b>12 分</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>逐題得分表 · Mark-by-mark table</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr>
+      <th class="n">題號</th><th>課題 Topic</th><th>英文主題 English topic</th><th class="n">滿分</th><th class="n">得分</th><th>評語</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="n">1–11</td><td>質數、因數、HCF/LCM、四則運算</td><td>Prime, factors, directed numbers</td><td class="n">22</td><td class="n">—</td><td>選擇題，答案紙未附</td></tr>
+      <tr><td class="n">12–16</td><td colspan="4" style="color:#a3302a"><b>本影印本缺頁（原卷第 4 頁）</b>，共 5 題 10 分</td></tr>
+      <tr><td class="n">17</td><td>判斷代數式化簡</td><td>Which expression is correct?</td><td class="n">2</td><td class="n">—</td><td>選擇題</td></tr>
+      <tr><td class="n">18</td><td>質因數分解求 L.C.M.</td><td>L.C.M. by prime factorization</td><td class="n">6</td><td class="n">0–1</td><td>分解未完成、45 誤含因數 2</td></tr>
+      <tr><td class="n">19</td><td>指數記法計算</td><td>Index notation</td><td class="n">4</td><td class="n">0</td><td>5³ 算成 75、2⁴ 算成 32</td></tr>
+      <tr><td class="n">20</td><td>有向數混合運算</td><td>Order of operations</td><td class="n">6</td><td class="n">2</td><td>(−2)³ 算成 −16；1500÷(−15) 算成 −10</td></tr>
+      <tr><td class="n">21</td><td>代數式化簡（含分數）</td><td>Simplify expressions</td><td class="n">5</td><td class="n">1</td><td>「分子分母分別相減」嚴重錯誤</td></tr>
+      <tr><td class="n">22</td><td>代數式化簡（乘除）</td><td>Simplify (product / quotient)</td><td class="n">5</td><td class="n">3</td><td>(a) 對；(b) 分母數錯</td></tr>
+      <tr><td class="n">23</td><td>文字轉代數式</td><td>Words → algebraic expressions</td><td class="n">3</td><td class="n">0</td><td>英文語序理解錯（subtract A from B）</td></tr>
+      <tr class="hi"><td class="n">24</td><td>溫度應用題（有向數）</td><td>Temperature problem</td><td class="n">5</td><td class="n">5 ✓</td><td><b>滿分 Good!</b> 全卷最好的一題</td></tr>
+      <tr><td class="n">25</td><td>金錢應用題（代數式）</td><td>Money problem</td><td class="n">4</td><td class="n">3</td><td>寫成 x5、y40，係數位置錯</td></tr>
+      <tr><td class="n">26</td><td>H.C.F. 應用題</td><td>H.C.F. word problem</td><td class="n">6</td><td class="n">0</td><td>把三個數「相加」，方向完全錯</td></tr>
+      <tr><td class="n">27</td><td>奇偶性推理 + 代數式</td><td>Odd / even reasoning</td><td class="n">8</td><td class="n">0</td><td>答案其實正確，但沒寫在指定位置</td></tr>
+      <tr><td class="n">28</td><td>整除性與數字謎題</td><td>Divisibility puzzle</td><td class="n">7</td><td class="n">2</td><td>漏了 ♥ = 9 的個案</td></tr>
+      <tr><td class="n">29</td><td>數列規律與求和</td><td>Sequence &amp; series</td><td class="n">7</td><td class="n">3</td><td>項數算成 54（應為 55）</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout tip">
+    <b>先講好消息 · The good news</b>
+    第 24 題（溫度應用題）你拿滿分 <em>Good!</em>。這題同時考「有向數加減」、「比大小」和「文字題理解」三樣東西 —— 證明你<strong>完全有能力</strong>做對英文應用題。第 27 題你其實整題都對（下面會詳細說明），只是答案沒寫在老師看的地方。
+  </div>
+</section>
+
+<!-- ================= 2. DIAGNOSIS ================= -->
+<section id="diagnosis">
+  <div class="sec-head"><span class="sec-num">02</span><h2>失分地圖 · Where the marks went</h2></div>
+  <p class="sec-desc">把全卷錯誤歸類後，只有 <b>6 個</b> 真正的問題。逐個擊破，下一份卷就能上 70 分。</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4 style="color:#a3302a">① 指數概念不牢 — 約失 4 分</h4>
+      <p style="margin:0;font-size:14.5px">
+      5³ 寫成 75（應為 <span class="math">5×5×5 = 125</span>）；2⁴ 寫成 32（應為 <span class="math">2×2×2×2 = 16</span>）；
+      (−2)³ 寫成 −16（應為 <span class="math">−8</span>）。<br>
+      <span class="dim">指數 = 底數自己乘自己幾次。你似乎把「5³」讀成「5×3」或「5×15」。</span></p>
+    </div>
+    <div class="card">
+      <h4 style="color:#a3302a">② 分數／除法規則混淆 — 約失 4 分</h4>
+      <p style="margin:0;font-size:14.5px">
+      2x ÷ 7 − x ÷ 3 你寫成 (2x − x) ÷ (7 − 3)。<br>
+      老師批註 <em>“Cannot move”</em>。<br>
+      <span class="dim">分數相減要通分，不能把分子、分母「各自相減」。</span></p>
+    </div>
+    <div class="card">
+      <h4 style="color:#a3302a">③ 質因數分解不徹底 — 約失 5 分</h4>
+      <p style="margin:0;font-size:14.5px">
+      45 寫成 2×3×5（45 是奇數，不可能有因數 2！）；56 寫成 2×28（28 不是質數）。<br>
+      <span class="dim">結果裡不能有 1，也不能有合數。</span></p>
+    </div>
+    <div class="card">
+      <h4 style="color:#a3302a">④ 英文文字題 → 代數式 轉換 — 約失 3 分</h4>
+      <p style="margin:0;font-size:14.5px">
+      “Subtract k from the product of x and y” 你寫成 k(x + y)。<br>
+      正確是 <span class="math">xy − k</span>。<br>
+      <span class="dim">關鍵：<b>from</b> 後面那個才是「被減數」。</span></p>
+    </div>
+    <div class="card">
+      <h4 style="color:#a3302a">⑤ HCF / LCM 應用題分不清 — 約失 6 分</h4>
+      <p style="margin:0;font-size:14.5px">
+      「平分到最多幾個袋」＝ <b>H.C.F.</b>，你卻把 42、98、154 <b>加起來</b> = 294。<br>
+      <span class="dim">看到 at most / greatest number of groups → HCF；看到 at least / 同時 / 再次相遇 → LCM。</span></p>
+    </div>
+    <div class="card">
+      <h4 style="color:#7d5210">⑥ 答題規範與書寫位置 — 約失 12 分 ⚠</h4>
+      <p style="margin:0;font-size:14.5px">
+      <b>這是最可惜的一項。</b>第 18、19、23、26、27 題你的<strong>正確答案都寫出來了</strong>，
+      但寫在指定橫線外面、或被紅叉劃掉的區域旁邊，老師沒有計分。<br>
+      <span class="dim">Also: 一題寫了兩個答案（左邊錯、右邊對），老師只會看第一個。</span></p>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <b>最重要的一句 · The single most important lesson</b>
+    在數學卷上，<strong>「寫對」不等於「得分」</strong>。得分 = 寫對 + <u>寫在指定位置</u> + <u>只寫一個最終答案</u> + <u>有單位</u>。
+    單單改掉書寫習慣，你這一卷就能多拿 10 分以上。
+  </div>
+
+  <h3>錯誤類型 vs 可立即補救程度</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>錯誤類型</th><th>性質</th><th class="n">可補救速度</th><th>行動</th></tr></thead>
+    <tbody>
+      <tr><td>答案寫錯位置／寫兩個答案</td><td>習慣問題</td><td class="n" style="color:#26624a"><b>1 天</b></td><td>做 5 份小測，強制「答案線」練習</td></tr>
+      <tr><td>指數、質因數表不熟</td><td>記憶問題</td><td class="n" style="color:#26624a"><b>3 天</b></td><td>背 2¹–2¹⁰、3¹–3⁵、1–20 平方</td></tr>
+      <tr><td>分數／除法規則</td><td>規則問題</td><td class="n" style="color:#a86f18"><b>1 週</b></td><td>每天 6 題分數化簡</td></tr>
+      <tr><td>文字題轉代數式</td><td>英文 + 邏輯</td><td class="n" style="color:#a86f18"><b>2–3 週</b></td><td>背 20 個句式（第 ④ 節）</td></tr>
+      <tr><td>HCF / LCM 場景判斷</td><td>概念辨析</td><td class="n" style="color:#a86f18"><b>1 週</b></td><td>做 20 題「分類練習」</td></tr>
+      <tr><td>長題推理表達</td><td>綜合能力</td><td class="n" style="color:#a3302a"><b>4–6 週</b></td><td>每週 2 題完整寫解</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ================= 3. PAPER ================= -->
+<section id="paper">
+  <div class="sec-head"><span class="sec-num">03</span><h2>逐題中英拆解 · Question by Question</h2></div>
+  <p class="sec-desc">每題依序給你：英文原題 → 中文翻譯 → 關鍵詞 → 完整解法 → 你的卷面 → 錯在哪 → 英文怎麼讀。</p>
+
+  <div class="filterbar" id="filterbar">
+    <span class="dim" style="margin-right:4px">篩選：</span>
+    <button class="chip on" data-f="all">全部 All</button>
+    <button class="chip" data-f="bad">只看失分 Wrong</button>
+    <button class="chip" data-f="half">部分得分 Partial</button>
+    <button class="chip" data-f="good">滿分 Correct</button>
+  </div>
+
+  <h3 style="margin-top:10px">Section A &nbsp;·&nbsp; 選擇題 Multiple-Choice（每題 2 分）</h3>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">1</span>
+      <span class="tag tag-topic">質數 Prime numbers</span>
+      <span class="tag tag-m">2 marks</span></div>
+    <p class="q-en">Which of the following number is <b>NOT</b> a prime number?</p>
+    <p class="q-zh">下列哪一個數 <b>不是</b> 質數？</p>
+    <div class="opts">
+      <div>A. 59</div><div class="ans">B. 69 ✓</div><div>C. 79</div><div>D. 89</div>
+    </div>
+    <div class="grid2">
+      <div class="box box-key"><h4>題眼 Key words</h4>
+        <ul>
+          <li><b>prime number</b> 質數 = 只有 1 和它自己兩個因數的自然數（&gt;1）</li>
+          <li><b>NOT</b> ＝ 找「例外」，畫圈提醒自己</li>
+        </ul>
+      </div>
+      <div class="box box-work"><h4>解法 Working</h4>
+        <div class="calc">69 = 3 × 23   → 有第三個因數 → 合數 (composite)
+59, 79, 89 → 用 2,3,5,7 都除不盡 → 質數</div>
+      </div>
+    </div>
+    <div class="box box-en" style="margin-top:12px"><h4>英文怎麼讀</h4>
+      「Which of the following <u>number</u> is not a prime number?」中 <em>of the following</em> = 以下這些之中；
+      <em>which ... is not</em> = 哪一個不是。答題時把四個選項都「過一遍」，不要看到 59 覺得是質數就馬上選 A。
+    </div>
+  </article>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">2</span>
+      <span class="tag tag-topic">因數 Factors / 整除性 Divisibility</span>
+      <span class="tag tag-m">2 marks</span></div>
+    <p class="q-en">Which of the following are factors of 64 890?</p>
+    <p class="q-zh">下列哪些是 64 890 的因數？</p>
+    <div class="q-en" style="font-size:15px;color:#46586a;margin-bottom:10px">
+      I. 3 &nbsp;&nbsp;&nbsp; II. 6 &nbsp;&nbsp;&nbsp; III. 8
+    </div>
+    <div class="opts">
+      <div class="ans">A. I and II only ✓</div><div>B. I and III only</div>
+      <div>C. II and III only</div><div>D. I, II and III</div>
+    </div>
+    <div class="grid2">
+      <div class="box box-key"><h4>題眼 Key words</h4>
+        <ul><li><b>factor</b> 因數：能整除它的數</li>
+        <li><b>only</b> ＝ 只有這些，考細心</li></ul>
+      </div>
+      <div class="box box-work"><h4>解法 Working（用整除性檢定）</h4>
+        <div class="calc">I.  3 → 數字和 6+4+8+9+0 = 27，可被 3 整除 → YES
+II. 6 → 要同時可被 2 和 3 整除：末位 0（偶數）✓，數字和 27 ✓ → YES
+III.8 → 看末三位 890：890 ÷ 8 = 111.25 ✗ → NO</div>
+      </div>
+    </div>
+    <div class="box box-key" style="margin-top:12px"><h4>必背整除性檢定 Divisibility tests</h4>
+      <ul>
+        <li><b>2</b>：末位 0,2,4,6,8 &nbsp;|&nbsp; <b>5</b>：末位 0 或 5 &nbsp;|&nbsp; <b>10</b>：末位 0</li>
+        <li><b>3</b>：各位數字和可被 3 整除 &nbsp;|&nbsp; <b>9</b>：各位數字和可被 9 整除</li>
+        <li><b>4</b>：末<b>兩</b>位可被 4 整除 &nbsp;|&nbsp; <b>8</b>：末<b>三</b>位可被 8 整除</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">3</span>
+      <span class="tag tag-topic">H.C.F. 最大公因數</span>
+      <span class="tag tag-m">2 marks</span></div>
+    <p class="q-en">The H.C.F. of <span class="math">3³ × 7⁴ × 11²</span> and <span class="math">7³ × 11³</span> is</p>
+    <p class="q-zh">求 <span class="math">3³×7⁴×11²</span> 與 <span class="math">7³×11³</span> 的最大公因數。</p>
+    <div class="opts">
+      <div class="ans">A. 7³ × 11² ✓</div><div>B. 7⁴ × 11³</div>
+      <div>C. 3³ × 7⁴ × 11³</div><div>D. 3³ × 7⁷ × 11⁵</div>
+    </div>
+    <div class="grid2">
+      <div class="box box-work"><h4>解法 Working</h4>
+        <div class="calc">H.C.F. → 取「<b>共同</b>的質因數」，指數取 <b>小</b> 的那個
+共同質因數：7 和 11（3 只在第一個出現 → 不要）
+7 ：取 min(4,3) = 3
+11：取 min(2,3) = 2
+H.C.F. = 7³ × 11²</div>
+      </div>
+      <div class="box box-key"><h4>口訣 Formula</h4>
+        <ul>
+          <li><b>H.C.F.</b> = 共同質因數，指數取 <b>小</b>（min）</li>
+          <li><b>L.C.M.</b> = 所有質因數，指數取 <b>大</b>（max）</li>
+        </ul>
+        <p style="margin:6px 0 0" class="dim">記法：HCF 要「共同」，所以挑剔、取小的；LCM 要「包住全部」，所以大方、取大的。</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">4</span>
+      <span class="tag tag-topic">L.C.M. 最小公倍數</span>
+      <span class="tag tag-m">2 marks</span></div>
+    <p class="q-en">The L.C.M. of 48, 60 and 72 is</p>
+    <p class="q-zh">求 48、60、72 的最小公倍數。</p>
+    <div class="opts"><div>A. 12</div><div>B. 24</div><div class="ans">C. 720 ✓</div><div>D. 1440</div></div>
+    <div class="box box-work"><h4>解法 Working</h4>
+      <div class="calc">48 = 2⁴ × 3
+60 = 2² × 3 × 5
+72 = 2³ × 3²
+L.C.M. = 2⁴ × 3² × 5 = 16 × 9 × 5 = 720</div>
+    </div>
+    <div class="box box-en" style="margin-top:12px"><h4>陷阱 Trap</h4>
+      選項 A 的 12 是 H.C.F.！出題人故意把「最大公因數」放在第一個誘惑你。
+      <b>看清楚題目寫的是 H.C.F. 還是 L.C.M.</b>
+    </div>
+  </article>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">5</span>
+      <span class="tag tag-topic">四則運算次序 Order of operations</span>
+      <span class="tag tag-m">2 marks</span></div>
+    <p class="q-en"><span class="math">6 − {1 + [15 − (3 + 4) × 2] × 3} =</span></p>
+    <p class="q-zh">計算 6 − {1 + [15 − (3 + 4) × 2] × 3}。</p>
+    <div class="opts"><div>A. 0</div><div class="ans">B. 2 ✓</div><div>C. 8</div><div>D. 41</div></div>
+    <div class="box box-work"><h4>解法 Working（由內到外）</h4>
+      <div class="calc">6 − {1 + [15 − (<b>3 + 4</b>) × 2] × 3}
+= 6 − {1 + [15 − <b>7 × 2</b>] × 3}        ← 先乘除：7×2 = 14
+= 6 − {1 + <b>[15 − 14]</b> × 3}           ← 方括號
+= 6 − {1 + <b>1 × 3</b>}
+= 6 − <b>{4}</b>
+= <b>2</b></div>
+    </div>
+    <div class="box box-key" style="margin-top:12px"><h4>英文括號名稱 Bracket names</h4>
+      <ul>
+        <li><b>(&nbsp;)</b> round brackets / parentheses 圓括號</li>
+        <li><b>[&nbsp;]</b> square brackets 方括號</li>
+        <li><b>{&nbsp;}</b> curly brackets / braces 大括號</li>
+        <li>次序：<b>由最內層做起</b> → 先 × ÷ 後 + −（同級由左至右）</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">6</span>
+      <span class="tag tag-topic">有向數 Directed numbers</span>
+      <span class="tag tag-m">2 marks</span></div>
+    <p class="q-en"><span class="math">[(−5) − (−3) + 2] × (−1) =</span></p>
+    <p class="q-zh">計算 [(−5) − (−3) + 2] × (−1)。</p>
+    <div class="opts"><div>A. 1</div><div class="ans">B. 0 ✓</div><div>C. −1</div><div>D. −10</div></div>
+    <div class="box box-work"><h4>解法 Working</h4>
+      <div class="calc">[(−5) − (−3) + 2] × (−1)
+= [ −5 + 3 + 2 ] × (−1)      ← 減負數 = 加正數
+= [ 0 ] × (−1)
+= <b>0</b>                       ← 0 乘任何數都是 0</div>
+    </div>
+    <div class="box box-key" style="margin-top:12px"><h4>關鍵規則 Rules</h4>
+      <ul>
+        <li><span class="math">a − (−b) = a + b</span>（減負 = 加正）</li>
+        <li><span class="math">a + (−b) = a − b</span></li>
+        <li><b>0 × 任何數 = 0</b>（不是 −1，也不是 1）</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">7</span>
+      <span class="tag tag-topic">帶分數 ÷ 帶分數</span>
+      <span class="tag tag-m">2 marks</span></div>
+    <p class="q-en"><span class="math">(−13¾) ÷ (−1⅚) =</span></p>
+    <p class="q-zh">計算 (−13 又 3/4) ÷ (−1 又 5/6)。</p>
+    <div class="opts"><div class="ans">A. 15/2 ✓</div><div>B. 13 又 9/20</div><div>C. −15/2</div><div>D. −13 又 9/20</div></div>
+    <div class="box box-work"><h4>解法 Working</h4>
+      <div class="calc">第 1 步：帶分數 → 假分數
+  −13¾ = −(13×4 + 3)/4 = −55/4
+  −1⅚  = −(1×6 + 5)/6 = −11/6
+
+第 2 步：除以分數 = 乘以它的倒數 (multiply by the reciprocal)
+  (−55/4) ÷ (−11/6) = (−55/4) × (−6/11)
+
+第 3 步：負負得正，約分
+  = (55 × 6) / (4 × 11)
+  = (5 × 6) / 4          ← 55 ÷ 11 = 5
+  = 30/4 = <b>15/2</b></div>
+    </div>
+    <div class="box box-key" style="margin-top:12px"><h4>必記 Rules</h4>
+      <ul>
+        <li><b>mixed number</b> 帶分數 → <b>improper fraction</b> 假分數：<span class="math">a b/c = (a·c + b)/c</span></li>
+        <li><b>reciprocal</b> 倒數：<span class="math">11/6 → 6/11</span></li>
+        <li>兩數同號相除 → 結果為正（負 ÷ 負 = 正）</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">8</span>
+      <span class="tag tag-topic">數線上的大小關係</span>
+      <span class="tag tag-m">2 marks</span>
+      <span class="tag tag-half">高難度</span></div>
+    <p class="q-en">Referring to the following number line, which of the following <b>MUST</b> be true?</p>
+    <p class="q-zh">參考下面的數線，下列哪一項<b>必然</b>成立？</p>
+    <p class="q-zh" style="border:none;padding:0;margin-bottom:10px">
+      數線上由左至右依次是 <span class="math">a</span>、<span class="math">b</span>、0、<span class="math">c</span>，即 <span class="math">a &lt; b &lt; 0 &lt; c</span>。
+    </p>
+    <div class="opts">
+      <div>A. <span class="math">a + b &gt; 0</span></div>
+      <div>B. <span class="math">a − b &gt; 0</span></div>
+      <div>C. <span class="math">b − a &gt; c</span></div>
+      <div class="ans">D. <span class="math">a + b &lt; c</span> ✓</div>
+    </div>
+    <div class="box box-work"><h4>解法 Working（用「正負」判斷，不必知道具體數字）</h4>
+      <div class="calc">已知：a、b 都是負數，c 是正數。
+
+A. a + b &gt; 0   → 負 + 負 = 負，不可能 &gt; 0            ✗
+B. a − b &gt; 0   → 因 a &lt; b，所以 a − b &lt; 0            ✗
+C. b − a &gt; c   → b − a 是正數，但可能只有 0.05，而 c 可能很大 → 不一定 ✗
+D. a + b &lt; c   → 左邊是負數，右邊是正數，負 &lt; 正 永遠成立 ✓</div>
+    </div>
+    <div class="box box-key" style="margin-top:12px"><h4>MUST be true 的解題法</h4>
+      <p style="margin:0">這類題<strong>不能靠「代入一組數」</strong>，要找「無論如何都成立」的那一項。<br>
+      技巧：<b>用極端值反駁</b>（想讓它錯，能不能找到例子？找得到就不可能「必然」成立）。<br>
+      例如 C：取 <span class="math">a = −0.1, b = −0.05, c = 100</span>，則 b − a = 0.05 &lt; 100 → C 就錯了。</p>
+    </div>
+  </article>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">9</span>
+      <span class="tag tag-topic">有向數四則</span>
+      <span class="tag tag-m">2 marks</span></div>
+    <p class="q-en">Which of the following expressions gives the <b>greatest</b> value?</p>
+    <p class="q-zh">下列哪一個式子的值<b>最大</b>？</p>
+    <div class="opts wide">
+      <div>A. <span class="math">5 − 5 − 5 − 5</span></div>
+      <div>B. <span class="math">5 + (−5) + (−5) + (−5)</span></div>
+      <div>C. <span class="math">(−5) − (−5) − (+5) + (−5)</span></div>
+      <div class="ans">D. <span class="math">(+5) − (−5) + (−5) − (+5)</span> ✓</div>
+    </div>
+    <div class="box box-work"><h4>解法 Working（逐個算）</h4>
+      <div class="calc">A = 5 − 5 − 5 − 5   = −10
+B = 5 − 5 − 5 − 5   = −10
+C = −5 + 5 − 5 − 5  = −10
+D = 5 + 5 − 5 − 5   = 0    ← 最大</div>
+    </div>
+    <div class="box box-en" style="margin-top:12px"><h4>技巧 Tip</h4>
+      四個選項都是「4 個 5 在加減」，只差符號寫法。秘訣是<strong>先把每一個都化成同一個形式</strong>再算。
+      D 之所以是 0，是因為 <span class="math">−(−5)</span> 貢獻了 +5，而其他都是減 5。
+    </div>
+  </article>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">10</span>
+      <span class="tag tag-topic">數線 / 有向距離</span>
+      <span class="tag tag-m">2 marks</span></div>
+    <p class="q-en">Referring to the following number line, find the number represented by <span class="math">X</span>.</p>
+    <p class="q-zh">參考下面的數線，求 <span class="math">X</span> 所代表的數。</p>
+    <p class="q-zh" style="border:none;padding:0;margin-bottom:10px">
+      數線上 <span class="math">−6</span> 在左、<span class="math">X</span> 在右，兩點相距 <b>11 units</b>（11 個單位）。
+    </p>
+    <div class="opts"><div class="ans">A. +5 ✓</div><div>B. −5</div><div>C. +6</div><div>D. −6</div></div>
+    <div class="box box-work"><h4>解法 Working</h4>
+      <div class="calc">X 在 −6 的右邊 11 格（向右 = 加）
+X = −6 + 11 = <b>+5</b></div>
+    </div>
+    <div class="box box-en" style="margin-top:12px"><h4>英文句型</h4>
+      <b>11 units to the right of −6</b> = 由 −6 向右 11 格 → 加<br>
+      <b>11 units to the left of −6</b> = 向左 11 格 → 減（會得到 −17）
+    </div>
+  </article>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">11</span>
+      <span class="tag tag-topic">相反數 / 絕對值</span>
+      <span class="tag tag-m">2 marks</span></div>
+    <p class="q-en">Which of the following numbers has the opposite number with the <b>smallest magnitude</b>?</p>
+    <p class="q-zh">下列哪一個數，其<b>相反數的絕對值（大小）最小</b>？</p>
+    <div class="opts"><div>A. 999</div><div class="ans">B. 1.5 ✓</div><div>C. −77/6</div><div>D. −13</div></div>
+    <div class="box box-work"><h4>解法 Working</h4>
+      <div class="calc">相反數 (opposite number) 只是變號，<b>絕對值不變</b>：
+  999    → 相反數 −999     → 大小 999
+  1.5    → 相反數 −1.5     → 大小 1.5      ← 最小
+  −77/6  → 相反數 +77/6    → 大小 ≈ 12.8
+  −13    → 相反數 +13      → 大小 13</div>
+    </div>
+    <div class="box box-key" style="margin-top:12px"><h4>詞彙 Vocabulary</h4>
+      <ul>
+        <li><b>opposite number</b> 相反數（+5 的相反數是 −5）</li>
+        <li><b>magnitude</b> 大小／絕對值（不計正負的那個量）</li>
+        <li><b>smallest</b> 最小 &nbsp;·&nbsp; <b>greatest</b> 最大</li>
+      </ul>
+    </div>
+  </article>
+
+  <div class="callout warn">
+    <b>缺頁說明 · Missing page</b>
+    這份影印本缺少原卷<b>第 4 頁</b>，即 Section A 的 <b>Q12–Q16</b>（共 5 題、10 分）。
+    本報告無法分析這 5 題。建議把原卷該頁補拍，然後用同一套模板自行補寫（模板見第 ⑦ 節）。
+  </div>
+
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">17</span>
+      <span class="tag tag-topic">代數式化簡（判斷對錯）</span>
+      <span class="tag tag-m">2 marks</span></div>
+    <p class="q-en">Which of the following is / are correct?</p>
+    <p class="q-zh">下列哪些算式正確？</p>
+    <div class="calc">I.   6x + 7 − 8x = 7 − 2x
+II.  4x − 3 − (x − 2x) = 5x − 3
+III. −5x ÷ 2 × 4x = −5/8</div>
+    <div class="opts">
+      <div>A. I only</div><div>B. III only</div>
+      <div class="ans">C. I and II only ✓</div><div>D. II and III only</div>
+    </div>
+    <div class="box box-work"><h4>解法 Working</h4>
+      <div class="calc">I.   6x + 7 − 8x = (6x − 8x) + 7 = −2x + 7 = 7 − 2x      ✓ 正確
+II.  4x − 3 − (x − 2x) = 4x − 3 − (−x) = 4x − 3 + x = 5x − 3  ✓ 正確
+III. −5x ÷ 2 × 4x   ← 乘除同級，<b>由左至右</b>
+     = (−5x ÷ 2) × 4x = (−2.5x) × 4x = −10x²            ✗ 不是 −5/8</div>
+    </div>
+    <div class="box box-key" style="margin-top:12px"><h4>三個致命概念</h4>
+      <ul>
+        <li><b>同類項才能合併</b>：6x 和 −8x 都是 x 項 → 可以合；7 是常數項 → 單獨留下。</li>
+        <li><b>減號後面有括號</b>：<span class="math">−(x − 2x)</span> 要<strong>整個括號變號</strong> → <span class="math">−x + 2x</span>。</li>
+        <li><b>÷ 和 × 同級</b>，由左至右 → 「先除 2，再乘 4x」，不是「先算 2 × 4x」。</li>
+      </ul>
+    </div>
+  </article>
+
+  <h3>Section B &nbsp;·&nbsp; 短題 Short Questions（44 分）</h3>
+
+  <!-- Q18 -->
+  <article class="q" data-status="bad">
+    <div class="q-head"><span class="qno">18</span>
+      <span class="tag tag-topic">質因數分解求 L.C.M.</span>
+      <span class="tag tag-m">0–1 / 6</span>
+      <span class="tag tag-bad">失分</span></div>
+    <p class="q-en">Find the L.C.M. of 30, 45 and 56 by prime factorization.</p>
+    <p class="q-zh">用<b>質因數分解法</b>求 30、45、56 的最小公倍數。</p>
+
+    <div class="grid2">
+      <div class="box box-work"><h4>標準解法 Model answer</h4>
+        <div class="calc">30 = 2 × 3 × 5
+45 = 3² × 5
+56 = 2³ × 7
+
+L.C.M. = 2³ × 3² × 5 × 7
+       = 8 × 9 × 5 × 7
+       = <b>2520</b></div>
+      </div>
+      <div class="box box-bad"><h4>你的卷面 Your work</h4>
+        <div class="calc">30 = 2×3×5×<span class="strike">1</span>
+45 = <span class="strike">2×3×5</span>          ← 45 是<b>奇數</b>，不可能有 2！
+56 = <span class="strike">2×28</span>           ← 28 不是質數
+L.C.M. = <span class="strike">2×3³×5×1×28 = 1680</span></div>
+        <p style="margin:8px 0 0">你後來在下面補寫的 <span class="final">45 = 3²×5、56 = 2³×7、L.C.M. = 2³×3²×5×7 = 2520</span> <b>完全正確</b>，但寫在指定作答區之外，沒有計分。</p>
+      </div>
+    </div>
+
+    <div class="box box-key" style="margin-top:12px"><h4>錯在哪 · 三個致命細節</h4>
+      <ul>
+        <li><b>① 45 = 2 × 3 × 5 是絕對不可能的</b>：45 是奇數（odd），奇數不可能被 2 整除。當你寫出「偶數因子」給一個奇數，就代表這一步算錯了。<u>檢查方法：乘回去 2×3×5 = 30 ≠ 45。</u></li>
+        <li><b>② 56 = 2 × 28 沒有分解完</b>：28 不是質數，要繼續分 → 28 = 2×2×7 → 56 = 2³×7。<b>質因數分解的結果只能是質數相乘。</b></li>
+        <li><b>③ 不要寫 ×1</b>：30 = 2×3×5 就已經完整，加 ×1 在數學上不算錯，但在考試中會被視為「未完成／不規範」而扣分。</li>
+      </ul>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>L.C.M. 的算法（與 H.C.F. 對比）</h4>
+      <div class="calc">H.C.F. = 取<b>共同</b>質因數，指數取<b>小</b>
+L.C.M. = 取<b>全部</b>質因數（含只出現一次的），指數取<b>大</b>
+
+本例質因數有 2、3、5、7
+2：最大指數 3（來自 56）  → 2³
+3：最大指數 2（來自 45）  → 3²
+5：最大指數 1（來自 30、45）→ 5
+7：最大指數 1（來自 56）  → 7
+L.C.M. = 2³ × 3² × 5 × 7</div>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀 · 詞彙</h4>
+      <p style="margin:0"><b>Find the L.C.M. of ... by prime factorization.</b><br>
+      find 求 · L.C.M. (Least Common Multiple) 最小公倍數 · by 用（某種方法）· prime factorization 質因數分解<br>
+      回答格式：<em>The L.C.M. of 30, 45 and 56 is 2520.</em>（記得寫成一句完整的英文，句末有句號）</p>
+    </div>
+  </article>
+
+  <!-- Q19 -->
+  <article class="q" data-status="bad">
+    <div class="q-head"><span class="qno">19</span>
+      <span class="tag tag-topic">指數記法 Index notation</span>
+      <span class="tag tag-m">0 / 4</span>
+      <span class="tag tag-bad">失分</span></div>
+    <p class="q-en">Evaluate <span class="math">5³ − 10² − 2⁴</span> and express the answer in index notation.</p>
+    <p class="q-zh">計算 5³ − 10² − 2⁴，並用<b>指數記法</b>表示答案。</p>
+
+    <div class="grid2">
+      <div class="box box-work"><h4>標準解法 Model answer</h4>
+        <div class="calc">5³ = 5 × 5 × 5 = 125
+10² = 10 × 10  = 100
+2⁴ = 2 × 2 × 2 × 2 = 16
+
+5³ − 10² − 2⁴ = 125 − 100 − 16
+             = <b>9</b>
+             = <b>3²</b></div>
+      </div>
+      <div class="box box-bad"><h4>你的卷面 Your work</h4>
+        <div class="calc"><span class="strike">5³ = 75</span>      ← 應該是 125
+10² = 100    ✓
+<span class="strike">2⁴ = 32</span>      ← 應該是 16
+= −57        ✗</div>
+        <p style="margin:8px 0 0">下面補寫的 <span class="final">125 − 100 − 16 = 9 = 3²</span> <b>完全正確</b>，但沒有計分。</p>
+      </div>
+    </div>
+
+    <div class="box box-key" style="margin-top:12px"><h4>錯在哪 · 指數到底是甚麼</h4>
+      <p style="margin:0 0 8px">指數 (index / power) 是「<b>底數自己乘自己幾次</b>」的縮寫，<u>不是乘</u>。</p>
+      <div class="calc">5³ 意思是「3 個 5 相乘」= 5×5×5 = 125   （<b>不是</b> 5×3 = 15，也不是 75）
+2⁴ 意思是「4 個 2 相乘」= 2×2×2×2 = 16  （<b>不是</b> 2×4 = 8，也不是 32）</div>
+      <p style="margin:8px 0 0">你寫的 75 = 5×15、32 = 2×16，兩次都像是「<b>把底數和某個數相乘</b>」，而不是「連乘」。
+      <b>請把下面的表背到能反射性說出答案。</b></p>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>必背指數表 · Must-memorise power table</h4>
+      <div class="grid2" style="gap:10px">
+        <div><b>2 的次方</b>
+          <div class="calc" style="margin-top:6px">2¹=2   2²=4   2³=8   2⁴=16  2⁵=32
+2⁶=64  2⁷=128 2⁸=256 2⁹=512 2¹⁰=1024</div></div>
+        <div><b>3、4、5 的次方</b>
+          <div class="calc" style="margin-top:6px">3¹=3  3²=9  3³=27 3⁴=81 3⁵=243
+4¹=4  4²=16 4³=64 4⁴=256
+5¹=5  5²=25 5³=125 5⁴=625</div></div>
+      </div>
+      <div class="calc" style="margin-top:10px">平方數 1–20：1, 4, 9, 16, 25, 36, 49, 64, 81, 100,
+              121, 144, 169, 196, 225, 256, 289, 324, 361, 400</div>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀 · 詞彙</h4>
+      <ul style="margin:0">
+        <li><b>evaluate</b> 求值（算出一個數字）</li>
+        <li><b>express the answer in index notation</b> 用指數記法表示答案</li>
+        <li><b>5³</b> 讀作 <em>「five to the power of three」</em> 或 <em>「five cubed」</em>；<b>10²</b> 讀作 <em>「ten squared」</em></li>
+        <li><b>base</b> 底數 &nbsp;·&nbsp; <b>index / power</b> 指數</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Q20 -->
+  <article class="q" data-status="half">
+    <div class="q-head"><span class="qno">20</span>
+      <span class="tag tag-topic">有向數混合運算</span>
+      <span class="tag tag-m">2 / 6</span>
+      <span class="tag tag-half">部分得分</span></div>
+    <p class="q-en">Evaluate the following.</p>
+    <p class="q-zh">計算下列各題。</p>
+    <div class="calc">(a)  6² + (−2)³ ÷ 4
+(b)  (−60)[3(−2) − (+19)] ÷ [−(26 − 11)]</div>
+
+    <div class="grid2">
+      <div class="box box-work"><h4>(a) 標準解法</h4>
+        <div class="calc">6² + (−2)³ ÷ 4
+= 36 + (−8) ÷ 4        ← (−2)³ = (−2)(−2)(−2) = −8
+= 36 + (−2)            ← 先除
+= <b>34</b></div>
+      </div>
+      <div class="box box-bad"><h4>(a) 你的卷面</h4>
+        <div class="calc">36 + (<span class="strike">−16</span> ÷ 4)
+= 36 + (−4) = <span class="strike">32</span></div>
+        <p style="margin:8px 0 0"><b>錯因</b>：把 (−2)³ 算成 −16。<br>
+        正確：<span class="math">(−2)³ = (−2)×(−2)×(−2) = 4×(−2) = −8</span>。<br>
+        你可能做了「(−2)×8」或「把立方當成乘 8」。</p>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:12px">
+      <div class="box box-work"><h4>(b) 標準解法</h4>
+        <div class="calc">(−60)[3(−2) − (+19)] ÷ [−(26 − 11)]
+= (−60)[−6 − 19] ÷ [−15]
+= (−60)(−25) ÷ (−15)
+= 1500 ÷ (−15)
+= <b>−100</b></div>
+      </div>
+      <div class="box box-bad"><h4>(b) 你的卷面</h4>
+        <div class="calc">(−60)(−25) ÷ [−(26−11)]   ✓ 這步對
+= (−60)(−25) ÷ (−15)      ✓ 這步也對
+= 1500 ÷ (−15)
+= <span class="strike">−10</span>                 ← 少了一個 0！
+（下方補寫 (−60)(−25/−15) = <span class="final">−100</span> ✓）</div>
+      </div>
+    </div>
+
+    <div class="box box-key" style="margin-top:12px"><h4>為甚麼 (−2)³ 是負數？符號規律</h4>
+      <div class="calc">(−2)² = (−2)(−2) = <b>+4</b>     負 × 負 = 正（偶數個負號 → 正）
+(−2)³ = (−2)(−2)(−2) = <b>−8</b>  三個負號 → 負（奇數個負號 → 負）
+(−2)⁴ = +16                   四個負號 → 正
+
+⚠ 注意 −2⁴ 和 (−2)⁴ 不同！
+   −2⁴  = −(2⁴) = −16   （負號在外面，先算 2⁴）
+   (−2)⁴ = +16          （負號在括號內，一起乘）</div>
+    </div>
+
+    <div class="box box-bad" style="margin-top:10px"><h4>為甚麼 1500 ÷ (−15) 不是 −10</h4>
+      <p style="margin:0"><span class="math">15 × 100 = 1500</span>，所以 <span class="math">1500 ÷ 15 = 100</span>。<br>
+      你寫 −10，等於說 <span class="math">15 × 10 = 1500</span>，少了<b>一個 0</b>。<br>
+      <b>補救方法：除完之後立刻「乘回去驗算」</b>：<span class="math">−15 × (−100) = 1500</span> ✓；<span class="math">−15 × (−10) = 150</span> ✗ → 立刻知道錯了。</p>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀</h4>
+      <p style="margin:0"><b>Evaluate</b> 計算／求值。<br>
+      「<span class="math">3(−2)</span>」中間省略了乘號，讀作 <em>「three times negative two」</em>。<br>
+      「<span class="math">[−(26 − 11)]</span>」= the negative of (26 − 11) = −15。<b>先算括號裡的，再加負號。</b></p>
+    </div>
+  </article>
+
+  <!-- Q21 -->
+  <article class="q" data-status="bad">
+    <div class="q-head"><span class="qno">21</span>
+      <span class="tag tag-topic">代數式化簡（分數）</span>
+      <span class="tag tag-m">1 / 5</span>
+      <span class="tag tag-bad">失分</span></div>
+    <p class="q-en">Simplify the following expressions.</p>
+    <p class="q-zh">化簡下列各代數式。</p>
+    <div class="calc">(a)  2x ÷ 7 − x ÷ 3
+(b)  (17 − 17y) + (19y − 2y)</div>
+
+    <div class="grid2">
+      <div class="box box-work"><h4>(a) 標準解法</h4>
+        <div class="calc">2x ÷ 7 − x ÷ 3
+= 2x/7 − x/3                 ← 除法寫成分數
+= (6x)/21 − (7x)/21          ← 通分，公分母 21
+= (6x − 7x)/21
+= <b>−x/21</b>  或  <b>− x⁄21</b></div>
+      </div>
+      <div class="box box-bad"><h4>(a) 你的卷面</h4>
+        <div class="calc"><span class="strike">(2x − x) ÷ (7 − 3)</span>
+<span class="strike">= x ÷ (0 ÷ 3)</span>
+= x ÷ 2⅓</div>
+        <p style="margin:8px 0 0"><b>老師批：</b><em>“Cannot move”</em>（不能這樣搬）<br>
+        你補寫的 <span class="final">2x/7 − x/3 = (6x − 7x)/21 = −x/21</span> <b>完全正確</b>。</p>
+      </div>
+    </div>
+
+    <div class="box box-bad" style="margin-top:12px"><h4>錯在哪 · 最嚴重的觀念錯誤</h4>
+      <p style="margin:0 0 8px">你做了這件事：把<strong>分子</strong>相減、<strong>分母</strong>相減。這是<u>絕對不允許</u>的。</p>
+      <div class="calc">✗ 錯： a/c − b/c = (a−b)/(c−c)   ← 錯！
+✓ 對： a/c − b/c = (a−b)/c        ← 分母相同時，<b>分母不變</b>
+
+用數字驗證（一定要做）：
+  2/7 − 1/3 = 6/21 − 7/21 = −1/21 ≈ −0.0476
+  你的做法：(2−1) ÷ (7−3) = 1 ÷ 4 = 0.25   ← 差了 5 倍以上！</div>
+      <p style="margin:8px 0 0"><b>記住：</b>分數加減只有「<b>分子</b>」在動，<b>分母</b>只能通分成一樣的，之後就固定不動。</p>
+    </div>
+
+    <div class="grid2" style="margin-top:12px">
+      <div class="box box-work"><h4>(b) 標準解法</h4>
+        <div class="calc">(17 − 17y) + (19y − 2y)
+= 17 − 17y + 17y            ← 19y − 2y = 17y
+= 17 − 17y + 17y
+= 17 + (−17y + 17y)
+= <b>17</b>                     ← y 項剛好抵消</div>
+      </div>
+      <div class="box box-bad"><h4>(b) 你的卷面</h4>
+        <div class="calc">(17 − 17y) + (19y − 2y)
+= 17 − 17y + 17y   ✓
+= <span class="strike">17 − 34y</span>          ← 把 −17y + 17y 加成 −34y</div>
+        <p style="margin:8px 0 0"><b>錯因</b>：<span class="math">−17y</span> 和 <span class="math">+17y</span> 是<strong>同一個數的正負</strong>，相加等於 0，不是 −34。</p>
+      </div>
+    </div>
+
+    <div class="box box-key" style="margin-top:12px"><h4>化簡三步法 · 3-step routine</h4>
+      <div class="calc">第 1 步：拆括號（注意括號前的正負號）
+第 2 步：把<b>同類項</b>圈在一起（x 項跟 x 項，常數跟常數）
+第 3 步：合併同類項，寫成「字母在前、係數在前」的標準形式
+
+例：5a − 3 + 2a + 8
+   = (5a + 2a) + (−3 + 8)
+   = 7a + 5</div>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀</h4>
+      <ul style="margin:0">
+        <li><b>simplify</b> 化簡 &nbsp;·&nbsp; <b>expression</b> 代數式 &nbsp;·&nbsp; <b>term</b> 項</li>
+        <li><b>like terms</b> 同類項 &nbsp;·&nbsp; <b>coefficient</b> 係數 &nbsp;·&nbsp; <b>constant</b> 常數</li>
+        <li>「2x ÷ 7」讀作 <em>two x divided by seven</em>，答案寫成分數 <b>2x/7</b> 最清楚。</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Q22 -->
+  <article class="q" data-status="half">
+    <div class="q-head"><span class="qno">22</span>
+      <span class="tag tag-topic">代數式化簡（乘除）</span>
+      <span class="tag tag-m">3 / 5</span>
+      <span class="tag tag-half">部分得分</span></div>
+    <p class="q-en">Simplify the following expressions.</p>
+    <p class="q-zh">化簡下列各代數式。</p>
+    <div class="calc">(a)  a × (a + a) + (b − 3b)
+(b)  (c − c − d − d − d) ÷ (c + c + d + d)</div>
+
+    <div class="grid2">
+      <div class="box box-work"><h4>(a) 標準解法</h4>
+        <div class="calc">a × (a + a) + (b − 3b)
+= a × (2a) + (−2b)          ← 先算括號
+= 2a² − 2b                  ← a × 2a = 2a²</div>
+      </div>
+      <div class="box box-bad"><h4>(a) 你的卷面</h4>
+        <div class="calc">= a×(2a) + (−2b)   ✓ 方法分
+= <span class="strike">2a² + (−2b)</span>   ← 老師批：OA = 1M（答案分只給 1）
+= 2a² − 2b         ✓ 下面補寫正確</div>
+        <p style="margin:8px 0 0"><b>失分原因</b>：最終答案寫成 <span class="math">2a² + (−2b)</span>，沒有化簡成 <span class="math">2a² − 2b</span>。<b>「+ (−2b)」要寫成「− 2b」。</b></p>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:12px">
+      <div class="box box-work"><h4>(b) 標準解法</h4>
+        <div class="calc">(c − c − d − d − d) ÷ (c + c + d + d)
+分子：c − c = 0，−d − d − d = −3d   →  −3d
+分母：c + c = 2c，d + d = 2d        →  2c + 2d
+
+= −3d / (2c + 2d)
+= <b>−3d / [2(c + d)]</b>      ← 可以再抽出公因數 2</div>
+      </div>
+      <div class="box box-bad"><h4>(b) 你的卷面</h4>
+        <div class="calc">= <span class="strike">−d / (2c + 3d)</span>
+= <span class="strike">−3d / (2c + 3d)</span>     ← 分母錯了</div>
+        <p style="margin:8px 0 0"><b>錯因 1</b>：分子漏掉一個 d（−d −d −d 是 <b>3 個</b> d）。<br>
+        <b>錯因 2</b>：分母 d + d 是 <b>2 個</b> d（=2d），你寫成 3d。<br>
+        <b>技巧</b>：數 d 的個數時，手指著逐個點數，數完在旁邊寫「共有 3 個 d」。</p>
+      </div>
+    </div>
+
+    <div class="box box-key" style="margin-top:12px"><h4>代數乘除規則</h4>
+      <div class="calc">單項式 × 單項式：係數乘係數，字母乘字母
+   a × 2a = 2 × a × a = 2a²
+   (3x)(4x) = 12x²
+   (2a)(3b) = 6ab
+
+除法寫成分數最安全：
+   6x ÷ 2 = 6x/2 = 3x
+   (−3d) ÷ (2c + 2d) = −3d/(2c + 2d)
+
+⚠ 分母是「多項」時，不能逐項約分！
+   (2c + 2d) 是「一個整體」，不能寫成 2c/2 + 2d/2 之類。</div>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀</h4>
+      <p style="margin:0"><b>a × (a + a)</b>：括號裡兩個 a 相加 = 2a，所以是 <em>a times two a</em> = 2a²。<br>
+      <b>÷</b> 讀作 <em>divided by</em>。答案最好寫成分數形式，比寫 ÷ 更清楚、更少出錯。</p>
+    </div>
+  </article>
+
+  <!-- Q23 -->
+  <article class="q" data-status="bad">
+    <div class="q-head"><span class="qno">23</span>
+      <span class="tag tag-topic">文字 → 代數式</span>
+      <span class="tag tag-m">0 / 3</span>
+      <span class="tag tag-bad">失分</span></div>
+    <p class="q-en">Use algebraic expressions to represent the following situations.</p>
+    <p class="q-zh">用代數式表示下列各情況。</p>
+    <div class="q-en" style="font-size:15.5px;margin:10px 0 6px">
+      (a) The sum of a and b is divided by c.<br>
+      (b) Subtract k from the product of x and y.<br>
+      (c) 8 times the quotient of dividing the 4th power of m by n.
+    </div>
+
+    <div class="tbl-scroll" style="margin-top:14px">
+    <table>
+      <thead><tr><th>小題</th><th>英文原句</th><th>中文</th><th>你的答案</th><th>正確答案</th></tr></thead>
+      <tbody>
+        <tr><td class="n">(a)</td><td>The sum of a and b is divided by c.</td><td>a 與 b 的和，除以 c</td><td style="color:#a3302a">c ÷ (a + b)</td><td style="color:#26624a"><b>(a + b)/c</b></td></tr>
+        <tr><td class="n">(b)</td><td>Subtract k from the product of x and y.</td><td>從 x 與 y 的積中減去 k</td><td style="color:#a3302a">k(x + y)</td><td style="color:#26624a"><b>xy − k</b></td></tr>
+        <tr><td class="n">(c)</td><td>8 times the quotient of dividing the 4th power of m by n.</td><td>m 的 4 次方除以 n 的商，再乘 8</td><td style="color:#a3302a">8[m − n] ÷ 4</td><td style="color:#26624a"><b>8m⁴/n</b></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="dim" style="margin-top:8px">你在下方補寫的三個答案（(a+b)/c、xy−k、8m⁴/n）<b>全部正確</b>，但沒有寫在指定的答案線上，因此 0 分。這是本卷最可惜的 3 分。</p>
+
+    <div class="box box-key" style="margin-top:12px"><h4>英文語序 → 數學順序 對照表 ⭐ 必背</h4>
+      <div class="tbl-scroll">
+      <table style="box-shadow:none">
+        <thead><tr><th>英文</th><th>中文</th><th>數學</th><th>注意</th></tr></thead>
+        <tbody>
+          <tr><td>the sum of A and B</td><td>A 與 B 的和</td><td class="math">A + B</td><td>要用括號包起來</td></tr>
+          <tr><td>the difference of A and B</td><td>A 與 B 的差</td><td class="math">A − B</td><td>順序重要</td></tr>
+          <tr><td>the product of A and B</td><td>A 與 B 的積</td><td class="math">AB</td><td></td></tr>
+          <tr><td>the quotient of dividing A by B</td><td>A 除以 B 的商</td><td class="math">A/B</td><td><b>by</b> 後面是分母</td></tr>
+          <tr><td>A is divided by B</td><td>A 被 B 除</td><td class="math">A/B</td><td><b>被動語態！A 在分子</b></td></tr>
+          <tr style="background:#fdf6e8"><td><b>Subtract A from B</b></td><td>從 B 減去 A</td><td class="math"><b>B − A</b></td><td><b>from 後面才是「被減數」</b> ⚠</td></tr>
+          <tr><td>Add A to B</td><td>把 A 加到 B 上</td><td class="math">B + A</td><td>加法交換，無所謂</td></tr>
+          <tr><td>n times A</td><td>A 的 n 倍</td><td class="math">nA</td><td>係數在前</td></tr>
+          <tr><td>the 4th power of m</td><td>m 的 4 次方</td><td class="math">m⁴</td><td></td></tr>
+          <tr><td>A is subtracted from B</td><td>B 減去 A</td><td class="math">B − A</td><td>同上，主語是被減的</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="box box-bad" style="margin-top:12px"><h4>逐題錯誤剖析</h4>
+      <p style="margin:0 0 6px"><b>(a)</b> 你寫 <span class="math">c ÷ (a+b)</span>。原句是「<b>A is divided by c</b>」的被動語態：
+      <u>主語 A（the sum of a and b）被 c 除</u> → 所以 A 在分子、c 在分母 → <span class="math">(a+b)/c</span>。<br>
+      你用中文的「A 除以 B」順序去想，就會寫反。<b>記法：英文被動句 = 主語放分子。</b></p>
+      <p style="margin:0 0 6px"><b>(b)</b> 你寫 <span class="math">k(x+y)</span>。你可能是把 subtract 想成「減」就放前面，但忘了 <b>from</b>：
+      <em>subtract k <u>from</u> (xy)</em> = 從 xy 之中拿走 k = <span class="math">xy − k</span>。<br>
+      ⭐ 一句口訣：<b>「from 後面站的是老大」</b>——老大在前面，被減。</p>
+      <p style="margin:0"><b>(c)</b> 你寫 <span class="math">8[m−n]÷4</span>，把「4th power」讀成「除以 4」了。
+      <b>4th power = 4 次方（m⁴）</b>，不是 ÷4。<br>
+      拆解順序：<span class="math">the quotient of dividing (m⁴) by (n) = m⁴/n</span>，然後 <span class="math">8 times ✕ = 8 · m⁴/n</span>。</p>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀 · 靠「動詞」定位</h4>
+      <p style="margin:0">讀這種題，先找<b>動詞</b>，動詞決定運算：<br>
+      <b>sum / add</b> → 加 &nbsp;·&nbsp; <b>subtract / minus / less</b> → 減 &nbsp;·&nbsp;
+      <b>product / times / multiply</b> → 乘 &nbsp;·&nbsp; <b>quotient / divide</b> → 除 &nbsp;·&nbsp;
+      <b>power / squared / cubed</b> → 次方<br><br>
+      然後問自己三件事：<b>① 誰被減／被除？② 有沒有括號（of / the sum of）？③ 係數放前面。</b></p>
+    </div>
+  </article>
+
+  <!-- Q24 -->
+  <article class="q" data-status="good">
+    <div class="q-head"><span class="qno">24</span>
+      <span class="tag tag-topic">溫度應用題（有向數）</span>
+      <span class="tag tag-m">5 / 5</span>
+      <span class="tag tag-good">滿分 Good!</span></div>
+    <p class="q-en">The temperature at 1 p.m. was −2°C. It then changed by +1.2°C, −0.3°C and −0.8°C in the following three hours.
+      (a) Find the temperature at 4 p.m. &nbsp;&nbsp; (b) Which is colder, 1 p.m. or 4 p.m.?</p>
+    <p class="q-zh">下午 1 時的氣溫是 −2°C。之後三小時，氣溫依次變化 +1.2°C、−0.3°C、−0.8°C。
+      (a) 求下午 4 時的氣溫。 (b) 下午 1 時還是 4 時較冷？</p>
+
+    <div class="grid2">
+      <div class="box box-work"><h4>標準解法 Model answer</h4>
+        <div class="calc">(a) 在 1 p.m. 的溫度上逐次加上變化：
+  −2 + 1.2 − 0.3 − 0.8
+= −0.8 − 0.3 − 0.8
+= −1.1 − 0.8
+= <b>−1.9°C</b>
+
+(b) −2 &lt; −1.9
+    ∴ 1 p.m. 較冷（在負數中，數字絕對值越大越冷）</div>
+      </div>
+      <div class="box box-good"><h4>你的卷面 Your work ✓</h4>
+        <div class="calc">(−2°C) + 1.2°C − 0.3°C − 0.8°C
+= (−1.1°C) − 0.8°C
+= <span class="final">−1.9°C</span>
+
+−2 &lt; −1.9
+∴ 1 p.m. is colder</div>
+        <p style="margin:8px 0 0"><b>全對！</b>你甚至寫了完整的比較理由。</p>
+      </div>
+    </div>
+
+    <div class="box box-good" style="margin-top:12px"><h4>為甚麼你這題能拿滿分 —— 請複製這個成功模式</h4>
+      <ul style="margin:0">
+        <li>① 你<b>把「變化」當成加法</b>處理（+1.2 就加，−0.3 就減），概念完全正確。</li>
+        <li>② 你<b>逐步寫出</b>中間結果（(−1.1°C) − 0.8°C），老師一眼看到你的思路 → 給足過程分。</li>
+        <li>③ 你<b>回答了問題所問</b>：「which is colder」→ 你明確寫出 1 p.m.。</li>
+        <li>④ 你有寫<b>單位 °C</b>。</li>
+      </ul>
+      <p style="margin:8px 0 0"><b>這四點，正是你其他題欠缺的地方。</b>把這題當模板：<u>逐步、有單位、回答「所問」</u>。</p>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>負數比大小的鐵則</h4>
+      <div class="calc">在負數世界裡，「數字越大」＝「實際越小」
+  −1.9  &gt;  −2        （−1.9 比較大）
+  所以 −1.9°C 比 −2°C <b>暖</b>，−2°C 較冷。
+
+口訣：負號後面數字越<b>大</b>，這個數就越<b>小</b>。
+   −100 &lt; −50 &lt; −3 &lt; −1 &lt; 0 &lt; 1</div>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀</h4>
+      <ul style="margin:0">
+        <li><b>The temperature ... was −2°C</b> 氣溫是 −2°C &nbsp;·&nbsp; 讀作 <em>minus two degrees Celsius</em></li>
+        <li><b>It then changed by +1.2°C</b> 之後變化了 +1.2°C &nbsp;·&nbsp; <b>changed by</b> = 變化量</li>
+        <li><b>in the following three hours</b> 在接下來三小時內</li>
+        <li><b>Which is colder, A or B?</b> A 還是 B 較冷？ 回答：<em>1 p.m. is colder.</em></li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Q25 -->
+  <article class="q" data-status="half">
+    <div class="q-head"><span class="qno">25</span>
+      <span class="tag tag-topic">金錢應用題（代數式）</span>
+      <span class="tag tag-m">3 / 4</span>
+      <span class="tag tag-half">部分得分</span></div>
+    <p class="q-en">Tom has $500. He wants to buy <span class="math">x</span> ice-cream cone and <span class="math">y</span> boxes of ice-cream.
+      If the price of an ice-cream cone is $5 and that of a box of ice-cream is 8 times the price of the ice-cream cone,
+      how much money will be left?</p>
+    <p class="q-zh">Tom 有 $500。他想買 x 個雪糕筒和 y 盒雪糕。若每個雪糕筒的價錢是 $5，
+      而每盒雪糕的價錢是雪糕筒價錢的 8 倍，還剩下多少錢？</p>
+
+    <div class="grid2">
+      <div class="box box-work"><h4>標準解法 Model answer</h4>
+        <div class="calc">每個雪糕筒：$5
+每盒雪糕   ：8 × $5 = $40
+x 個雪糕筒 ：$5x
+y 盒雪糕   ：$40y
+
+剩下 = 500 − 5x − 40y
+∴ 剩下 <b>$(500 − 5x − 40y)</b></div>
+      </div>
+      <div class="box box-bad"><h4>你的卷面 Your work</h4>
+        <div class="calc">$500 − $5 × x − $5 × 8 × y   ✓M ✓M
+= $500 − <span class="strike">$5</span> − <span class="strike">y$40</span>
+∴ will be left <span class="strike">$500 − $5 − y$40</span>
+
+（下方補寫）
+The change = 500 − 5x − 8(5)y
+= <span class="final">$(500 − 5x − 40y)</span>  ✓</div>
+      </div>
+    </div>
+
+    <div class="box box-bad" style="margin-top:12px"><h4>失分點 · 老師的兩個批註</h4>
+      <p style="margin:0 0 6px"><b>「5x but not x5」</b>：你寫成 <span class="math">$5 × x</span> 然後化簡成「$5」，把 x 弄丟了。
+      正確寫法 <b>5x</b>——<u>係數寫在字母前面</u>，而且不能省略字母。</p>
+      <p style="margin:0 0 6px"><b>「40y but not y40」</b>：你寫成 <span class="math">y$40</span>。
+      英文口語可以說 "y forty dollars"，但<u>數學式一定要寫 40y</u>。</p>
+      <p style="margin:0"><b>單位 $ 的位置</b>：整個代數式是一個金額，所以寫成 <span class="math">$(500 − 5x − 40y)</span>——
+      <b>$ 放最前面，外面的括號代表「這整串是一個美元金額」</b>。</p>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>書寫規範 · 一定要這樣寫</h4>
+      <div class="calc">✓ 5x    ✗ x5    ✗ 5 × x（可以但慢）
+✓ 40y   ✗ y40
+✓ 2ab   ✗ ab2
+✓ m⁴    ✗ m × m × m × m（除非要解釋）
+
+單位寫法：
+$(500 − 5x − 40y)        美元金額
+(500 − 5x − 40y) dollars  也可以
+500 − 5x − 40y            ✗ 沒有單位，扣分</div>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>應用題四步法 · Word problem routine</h4>
+      <div class="calc">第 1 步 設未知數（題目已給 x、y 就跳過）
+        Let x be the number of ice-cream cones.
+第 2 步 把每一個量「翻譯」成代數式
+        cost of cones = 5x ；cost of boxes = 40y
+第 3 步 寫出關係（剩下 = 總額 − 花費）
+        500 − 5x − 40y
+第 4 步 加上單位，寫成一句英文答案
+        ∴ $(500 − 5x − 40y) will be left.</div>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀</h4>
+      <ul style="margin:0">
+        <li><b>He wants to buy ...</b> 他想買…… &nbsp;·&nbsp; <b>the price of A is ...</b> A 的價錢是……</li>
+        <li><b>8 times the price of the ice-cream cone</b> 雪糕筒價錢的 8 倍 → <span class="math">8 × 5 = 40</span></li>
+        <li><b>that of</b> = the price of（避免重複的寫法，指「剛才那個名詞」）</li>
+        <li><b>how much money will be left?</b> 還剩多少錢？→ 答案要有 <b>$</b></li>
+        <li><b>the change</b> 找贖／餘款 &nbsp;·&nbsp; <b>the rest</b> 其餘</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Q26 -->
+  <article class="q" data-status="bad">
+    <div class="q-head"><span class="qno">26</span>
+      <span class="tag tag-topic">H.C.F. 應用題</span>
+      <span class="tag tag-m">0 / 6</span>
+      <span class="tag tag-bad">失分</span></div>
+    <p class="q-en">Ken packs 42 red pens, 98 green pens and 154 blue pens evenly to some bags such that each bag contains
+      the same number of red pens, the same number of green pens and the same number of blue pens.</p>
+    <p class="q-zh">Ken 把 42 枝紅筆、98 枝綠筆、154 枝藍筆平均分裝到若干個袋子，使每個袋中的紅筆數目相同、
+      綠筆數目相同、藍筆數目相同。</p>
+    <div class="calc">(a)  At most how many bags can be packed?                    (3 marks)
+(b)  If the number of bags packed is equal to the number found in (a),
+     find the numbers of red pens, green pens and blue pens in each bag.   (3 marks)</div>
+
+    <div class="grid2">
+      <div class="box box-work"><h4>標準解法 Model answer</h4>
+        <div class="calc">(a) 「平分且每袋數量相同」→ 求 <b>H.C.F.</b>
+  42  = 2 × 3 × 7
+  98  = 2 × 7²
+  154 = 2 × 7 × 11
+  共同質因數：2 和 7（指數取小）
+  H.C.F. = 2 × 7 = <b>14</b>
+  ∴ 最多可裝 <b>14 袋</b>
+
+(b) 每袋紅筆 = 42 ÷ 14 = <b>3</b> 枝
+    每袋綠筆 = 98 ÷ 14 = <b>7</b> 枝
+    每袋藍筆 = 154 ÷ 14 = <b>11</b> 枝
+    （檢查：3 + 7 + 11 = 21 枝／袋）</div>
+      </div>
+      <div class="box box-bad"><h4>你的卷面 Your work</h4>
+        <div class="calc">(a) <span class="strike">42 + 98 + 154 = 140 + 154 = 294</span>
+    ← 你把三個數<b>加起來</b>了！
+
+（下方補寫，全部正確但未計分）
+H.C.F. of 42, 98, 154
+= 2 × 7
+= <span class="final">14</span>
+∴ max no. of bags is <span class="final">14</span>
+
+red = 3   green = 7   blue = 11</div>
+      </div>
+    </div>
+
+    <div class="box box-bad" style="margin-top:12px"><h4>最關鍵的錯因 · 為甚麼是 H.C.F. 不是加法</h4>
+      <p style="margin:0 0 8px">題目要求「<b>平分</b>到若干袋」，每袋的三種筆數目要「<b>各自相同</b>」。
+      這代表 14 必須能<u>同時整除 42、98、154</u>——而「能同時整除三個數的最大數」就是 H.C.F.。</p>
+      <div class="calc">如果用加法：42 + 98 + 154 = 294
+  294 ÷ 42 = 7（不是整數嗎？）→ 294 ÷ 98 = 3 ✓ → 294 ÷ 154 = 1.9 ✗
+  294 不能整除 154，所以 294「袋」根本分不了 → 立刻知道方法錯
+
+用加法＝把三種筆「混成一堆」再分袋 → 但題目要求三種顏色分別平均。
+正確理解：<b>每個袋子是一個「模板」，要把三個數字都切成一樣大小的份</b> → H.C.F.</div>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>H.C.F. vs L.C.M. 場景判斷表 ⭐ 一定要背熟</h4>
+      <div class="tbl-scroll">
+      <table style="box-shadow:none">
+        <thead><tr><th>題目出現這些字</th><th>用</th><th>為甚麼</th></tr></thead>
+        <tbody>
+          <tr><td>at most ... how many bags / groups</td><td><b>H.C.F.</b></td><td>最多能分成幾組（每組一樣大）</td></tr>
+          <tr><td>greatest number of ... that can divide all</td><td><b>H.C.F.</b></td><td>最大能同時整除</td></tr>
+          <tr><td>largest possible length / size of each piece</td><td><b>H.C.F.</b></td><td>每段最長（切割問題）</td></tr>
+          <tr><td>square tiles of the largest size to cover</td><td><b>H.C.F.</b></td><td>最大的正方形</td></tr>
+          <tr><td>at least ... when will they meet again</td><td><b>L.C.M.</b></td><td>同時／再次相遇</td></tr>
+          <tr><td>smallest number of ... that can be divided by all</td><td><b>L.C.M.</b></td><td>最小能被全部整除</td></tr>
+          <tr><td>both / together / next time at the same moment</td><td><b>L.C.M.</b></td><td>共同發生</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="margin:8px 0 0"><b>口訣：</b>「<b>分得最多 → HCF；湊得最少／一起發生 → LCM</b>」。<br>
+      <span class="dim">HCF 是「切小」的概念；LCM 是「合大」的概念。</span></p>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀</h4>
+      <ul style="margin:0">
+        <li><b>packs ... evenly to some bags</b> 平均裝進若干袋 &nbsp;·&nbsp; <b>evenly</b> = 平均地（每份一樣多）</li>
+        <li><b>such that</b> 使得 &nbsp;·&nbsp; <b>the same number of ...</b> 相同數目的……</li>
+        <li><b>At most how many bags can be packed?</b> 最多可裝多少袋？→ 這是 H.C.F. 的訊號</li>
+        <li><b>find the numbers of red pens ... in each bag</b> 求每袋紅筆的數目 → 用「總數 ÷ 袋數」</li>
+      </ul>
+    </div>
+  </article>
+
+  <h3>Section C &nbsp;·&nbsp; 長題 Long Questions（22 分）</h3>
+
+  <!-- Q27 -->
+  <article class="q" data-status="bad">
+    <div class="q-head"><span class="qno">27</span>
+      <span class="tag tag-topic">奇偶性推理 + 代數式</span>
+      <span class="tag tag-m">0 / 8</span>
+      <span class="tag tag-bad">卷面 0 分，但答案其實對</span></div>
+    <p class="q-en">It is given that <span class="math">3x + 1</span> is the largest number among three consecutive positive even numbers.</p>
+    <p class="q-zh">已知 3x + 1 是三個<b>連續正偶數</b>中最大的一個。</p>
+    <div class="calc">(a)  Explain whether x is an odd number or an even number.        (2 marks)
+(b)  (i)  Express the other two even numbers in terms of x.      (3 marks)
+     (ii) Hence, find the sum of these three even numbers in terms of x.  (3 marks)</div>
+
+    <div class="grid2">
+      <div class="box box-work"><h4>標準解法 Model answer</h4>
+        <div class="calc">(a)  Since 3x + 1 is an even number,
+            3x = (an even number) − 1 = an odd number.
+            Since 3 is odd and 3x is odd, x must be <b>odd</b>.
+
+(b) (i) 三個連續偶數，最大的是 3x + 1
+        另外兩個 = (3x+1) − 2 和 (3x+1) − 4
+                  = <b>3x − 1</b> 和 <b>3x − 3</b>
+
+    (ii) 和 = (3x+1) + (3x−1) + (3x−3)
+           = 9x + (1 − 1 − 3)
+           = <b>9x − 3</b></div>
+      </div>
+      <div class="box box-bad"><h4>你的卷面 Your work（其實正確！）</h4>
+        <div class="calc">左邊草稿欄（被打叉）：
+  (a) 7 ✗   (b)(i) 3, 5 ✗   (b)(ii) 3x+1 = 21+1 = 22 ✗
+
+右邊正式作答：
+  (a) x is odd
+      ∵ an even no. − 1 = odd
+      ∴ 3x = odd no.
+      x must be an odd no.          ← <b>完全正確</b>
+
+  (b)(i) The next two even no.：
+         (3x+1) − 2 and (3x+1) − 4
+         = 3x − 1 and 3x − 3        ← <b>完全正確</b>
+
+  (b)(ii) The sum of these 3 even no.
+         = (3x+1) + (3x−1) + (3x−3)
+         = 9x − 3                   ← <b>完全正確</b></div>
+      </div>
+    </div>
+
+    <div class="box box-bad" style="margin-top:12px"><h4>這 8 分為甚麼會變成 0 分 —— 三點檢討</h4>
+      <ol style="margin:0;padding-left:1.2em">
+        <li><b>你同時交了「兩個版本的答案」。</b>左邊草稿欄有錯的答案（7、3/5、22），右邊有對的答案。老師改卷時會先看到左邊的錯答案，而且不確定哪個才是你的最終答案。</li>
+        <li><b>草稿不應該寫在答案區旁邊。</b>草稿寫在試題紙背面或頁邊空白，並畫線分隔、寫上「rough work」。</li>
+        <li><b>如果你在考試後才補上右邊的答案</b>，那更加不會計分，但這份「自我訂正」本身是好事——請把它移到錯題本（見第 ⑧ 節）。</li>
+      </ol>
+      <p style="margin:8px 0 0"><b>結論：這題你完全會做。8 分是「答題格式」丟的，不是「數學」丟的。</b></p>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>(a) 為甚麼一定要寫出「理由」</h4>
+      <div class="calc">題目動詞是 <b>Explain</b>（解釋），不是 Find（求）。
+所以只寫「x is odd」只有 1 分（答案分），
+寫出推理過程才有另外的 1 分（方法分）。
+
+推理鏈要三段：
+  ① 3x + 1 是偶數            （已知）
+  ② 3x = 偶數 − 1 = 奇數      （偶數減 1 得奇數）
+  ③ 3 是奇數，奇 × 奇 = 奇   （奇數乘奇數仍是奇數）
+  ∴ x 是奇數
+
+<b>英文寫法（背下來）：</b>
+  Since 3x + 1 is even, 3x is odd.
+  Since 3 is odd, x must be odd.</div>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>連續數的表達法 · Consecutive numbers</h4>
+      <div class="tbl-scroll">
+      <table style="box-shadow:none">
+        <thead><tr><th>類型</th><th>英文</th><th>若最小是 n</th><th>若最大是 n</th></tr></thead>
+        <tbody>
+          <tr><td>連續整數</td><td>consecutive integers</td><td class="math">n, n+1, n+2</td><td class="math">n−2, n−1, n</td></tr>
+          <tr><td>連續偶數</td><td>consecutive even numbers</td><td class="math">n, n+2, n+4</td><td class="math">n−4, n−2, n</td></tr>
+          <tr><td>連續奇數</td><td>consecutive odd numbers</td><td class="math">n, n+2, n+4</td><td class="math">n−4, n−2, n</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="margin:8px 0 0"><b>關鍵：偶數／奇數相差 2，不是 1！</b>（連續整數才相差 1）<br>
+      本例最大是 3x+1，所以往前減 2、再減 4。</p>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>奇偶性的基本規則（背）</h4>
+      <div class="calc">偶 + 偶 = 偶    奇 + 奇 = 偶    偶 + 奇 = 奇
+偶 × 任何數 = 偶              奇 × 奇 = 奇
+奇數 − 1 = 偶數               偶數 − 1 = 奇數
+2 的倍數一定是偶數            有因數 2 ⇔ 偶數</div>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀</h4>
+      <ul style="margin:0">
+        <li><b>It is given that ...</b> 已知…… &nbsp;·&nbsp; <b>consecutive</b> 連續的 &nbsp;·&nbsp; <b>positive</b> 正的</li>
+        <li><b>Explain whether A or B</b> 解釋是 A 還是 B → 必須給理由</li>
+        <li><b>Express ... in terms of x</b> 用 x 表示…… → 答案裡只能有 x，不能有具體數字</li>
+        <li><b>Hence</b> 因此（用上一小題的結果）→ 這兩題 (b)(i)(ii) 是連動的</li>
+        <li><b>the sum of these three</b> 這三個數的和</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Q28 -->
+  <article class="q" data-status="half">
+    <div class="q-head"><span class="qno">28</span>
+      <span class="tag tag-topic">整除性 + 數字謎題</span>
+      <span class="tag tag-m">2 / 7</span>
+      <span class="tag tag-half">答案對，過程扣分</span></div>
+    <p class="q-en">It is given that <span class="math">25♥2▲</span> is a 5-digit number, where ♥ and ▲ are digits.
+      If the number is divisible by 5 and 9, find all possible values of the 5-digit number.</p>
+    <p class="q-zh">已知 25♥2▲ 是一個五位數，其中 ♥ 和 ▲ 都是數字。若這個數可同時被 5 和 9 整除，
+      求這個五位數所有可能的值。</p>
+
+    <div class="box box-work"><h4>標準解法 Model answer（三步，缺一不可）</h4>
+      <div class="calc"><b>第 1 步：用「可被 5 整除」定出 ▲</b>
+  末位是 0 或 5  →  ▲ = 0 或 5
+
+<b>第 2 步：用「可被 9 整除」＝ 各位數字和可被 9 整除</b>
+  數字和 = 2 + 5 + ♥ + 2 + ▲ = 9 + ♥ + ▲
+
+  個案一：▲ = 0
+    9 + ♥ 要是 9 的倍數 → 9 + ♥ = 9 或 18
+    → ♥ = 0  （9 + 0 = 9）
+    → ♥ = 9  （9 + 9 = 18）   ⚠ 這個你漏了
+    得：<b>25020</b>、<b>25920</b>
+
+  個案二：▲ = 5
+    9 + ♥ + 5 = 14 + ♥ 要是 9 的倍數 → 14 + ♥ = 18
+    → ♥ = 4
+    得：<b>25425</b>
+
+<b>第 3 步：驗算</b>
+  25020 ÷ 5 = 5004 ✓   2+5+0+2+0 = 9 ✓
+  25920 ÷ 5 = 5184 ✓   2+5+9+2+0 = 18 ✓
+  25425 ÷ 5 = 5085 ✓   2+5+4+2+5 = 18 ✓
+
+∴ 所有可能值：<b>25020、25425、25920</b></div>
+    </div>
+
+    <div class="grid2" style="margin-top:12px">
+      <div class="box box-bad"><h4>你的卷面 Your work</h4>
+        <div class="calc">先用除法逐一驗證：
+25020 ÷ 5 = 5004 ✓
+25020 ÷ 9 = 2780 ✓
+25425 ÷ 5 = 5085 ✓
+25425 ÷ 9 = 2825 ✓
+
+再用代數：
+當 ▲ = 5：9 + ♥ + 5 = 18  →  ♥ = 4
+當 ▲ = 0：9 + ♥ + 0 = 9   →  ♥ = 0
+                            ⚠ 漏了 ♥ = 9
+
+答案：25425、25020、25920</div>
+        <p style="margin:8px 0 0"><b>答案完全正確</b>，但方法有洞（漏一個個案），所以只得 2 分。</p>
+      </div>
+      <div class="box box-key"><h4>失分點分析</h4>
+        <ul style="margin:0">
+          <li><b>① 漏個案</b>：▲=0 時，9 + ♥ 可以是 <b>9</b> 或 <b>18</b> 兩個可能（♥=0 或 9），你只寫了 = 9。</li>
+          <li><b>② 用除法逐一驗證太慢、不完整</b>。這題是「找<b>所有</b>可能值」（find <b>all</b> possible values），
+              必需求解方程，不能靠試。</li>
+          <li><b>③ 你有 25920 但沒對應的推理</b>，閱卷老師會覺得是「猜對的」。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box box-key" style="margin-top:12px"><h4>「找所有可能值」的標準答題框架</h4>
+      <div class="calc">① 用條件一列出「有幾種情況」（這裡：▲ = 0 或 5，共 2 種）
+② 每一種情況<b>分別</b>討論，<b>把所有可能的解都寫出來</b>
+③ 檢查有沒有漏（特別是「9 + ♥ = 9 或 18」這種<b>倍數有多個</b>的地方）
+④ 逐個驗算
+⑤ 用「∴」總結：所有可能值共有 n 個，分別是……
+
+<b>最重要的一句：看到 "all possible values"，就要問自己「還有沒有第二個？」</b></div>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>9 的倍數檢查 · 數字和法</h4>
+      <div class="calc">一個數能被 9 整除  ⇔  它的<b>各位數字之和</b>能被 9 整除
+  25425 → 2+5+4+2+5 = 18 → 18 ÷ 9 = 2 ✓
+
+一個數能被 3 整除  ⇔  各位數字之和能被 3 整除
+  25425 → 18 → 18 ÷ 3 = 6 ✓
+
+⚠ 注意：9 + ♥ = 9 <b>或 18 或 27</b>...
+   ♥ 是 0–9 的數字，所以 9 + ♥ 最大 18 → 只可能 9 或 18</div>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀</h4>
+      <ul style="margin:0">
+        <li><b>where ♥ and ▲ are digits</b> 其中 ♥ 和 ▲ 是數字（digit = 0–9 的單一位數字）</li>
+        <li><b>is divisible by 5 and 9</b> 可被 5 和 9 整除 &nbsp;·&nbsp; <b>divisible by</b> = 能被……整除</li>
+        <li><b>find all possible values</b> 求所有可能值 &nbsp;·&nbsp; <b>all</b> 這個字＝必須找齊</li>
+        <li><b>5-digit number</b> 五位數 &nbsp;·&nbsp; <b>two-digit number</b> 兩位數</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- Q29 -->
+  <article class="q" data-status="half">
+    <div class="q-head"><span class="qno">29</span>
+      <span class="tag tag-topic">數列規律與求和</span>
+      <span class="tag tag-m">3 / 7</span>
+      <span class="tag tag-half">部分得分</span></div>
+    <p class="q-en">(a) Find the values of <span class="math">(−13) − (−15)</span> and <span class="math">(−117) − (−119)</span>.</p>
+    <p class="q-en" style="font-size:15.5px;margin-top:6px">(b) Consider the following expression:</p>
+    <div class="calc">(−11) + (−13) − (−15) + (−17) − (−19) + … + (−117) − (−119)
+(i)  How many directed numbers are there in the expression?      (1 mark)
+(ii) Find the value of the expression.                            (4 marks)</div>
+
+    <div class="grid3">
+      <div class="box box-good"><h4>(a) ✓ 全對 2/2</h4>
+        <div class="calc">(−13) − (−15) = −13 + 15 = <b>2</b>
+(−117) − (−119) = −117 + 119 = <b>2</b></div>
+      </div>
+      <div class="box box-bad"><h4>(b)(i) ✗ 0/1</h4>
+        <div class="calc">你的答案：<span class="strike">54</span>
+正確答案：<b>55</b>
+（你旁邊其實寫了 (119−11)/2 + 1 = 55，
+  但沒抄到答案線上）</div>
+      </div>
+      <div class="box box-half"><h4>(b)(ii) 1/4</h4>
+        <div class="calc">你的答案：<span class="strike">−702</span>
+補寫：<span class="final">43</span> ✓ 計 1 分</div>
+      </div>
+    </div>
+
+    <div class="box box-work" style="margin-top:12px"><h4>標準解法 Model answer（逐步）</h4>
+      <div class="calc"><b>(b)(i) 數項數</b>
+  這些數是 −11, −13, −15, −17, …, −119
+  即 11, 13, 15, …, 119 這些<b>奇數</b>，每個前面配一個負號。
+
+  由 11 到 119，公差 2：
+  項數 = (119 − 11) ÷ 2 + 1
+       = 108 ÷ 2 + 1
+       = 54 + 1
+       = <b>55</b> 個
+
+  ⚠ 你算了 108 ÷ 2 = 54 就停手，忘了 <b>+1</b>。
+    檢查法：11 到 13 有 2 個數，而 (13−11)/2 + 1 = 2 ✓
+            11 到 15 有 3 個數，而 (15−11)/2 + 1 = 3 ✓
+
+<b>(b)(ii) 求值</b>
+  把式子重新分組（每一組都是「減去下一個」）：
+  (−11) + [(−13) − (−15)] + [(−17) − (−19)] + … + [(−117) − (−119)]
+
+  由 (a) 已知：每一個中括號 = 2
+  [(−13) − (−15)] = 2
+  [(−17) − (−19)] = 2
+  ⋮
+  [(−117) − (−119)] = 2
+
+  中括號的數目：由 −13 到 −119 共 (55 − 1) ÷ 2 = <b>27</b> 組
+
+  總值 = −11 + 27 × 2
+       = −11 + 54
+       = <b>43</b></div>
+    </div>
+
+    <div class="box box-bad" style="margin-top:12px"><h4>你原本的算式錯在哪</h4>
+      <div class="calc">你寫：(−11) × 54 − 2 × 54 = −594 − 108 = <span class="strike">−702</span>
+
+錯在兩處：
+① 項數用了 54（應為 55）
+② 把式子理解成「全部是 −11 加 54 次，再減 2×54」——
+   這是把規律看錯了。實際上 <b>負號只在第一個數之前是「加」</b>，
+   之後是「+、−、+、−」交替。</div>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>等差數列兩條必備公式 ⭐</h4>
+      <div class="calc">項數 (number of terms)：
+   項數 = (末項 − 首項) ÷ 公差 + 1
+
+第 n 項：
+   第 n 項 = 首項 + (n − 1) × 公差
+
+本例：首項 11、末項 119、公差 2
+   項數 = (119 − 11) ÷ 2 + 1 = 55
+
+小驗證（非常重要）：
+   1 到 10 有幾個數？(10−1)/1 + 1 = 10 ✓
+   若忘了 +1 就得 9，明顯錯 → 所以每次都要用「小數字」驗證公式。</div>
+      <p style="margin:8px 0 0"><b>詞彙：</b>first term 首項 · last term 末項 · common difference 公差 · number of terms 項數</p>
+    </div>
+
+    <div class="box box-key" style="margin-top:10px"><h4>分組配對法 · Grouping</h4>
+      <div class="calc">看到長長的加減數列，先問：「<b>能不能兩兩一組？</b>」
+  每組的值若相同 → 總和 = 組數 × 每組的值（＋剩下落單的）
+
+本例：
+  落單：(−11)
+  配對：(−13)−(−15)、( −17)−(−19)、… 每組都是 +2
+
+  總值 = 落單值 + 組數 × 每組值
+       = −11 + 27 × 2
+       = 43</div>
+    </div>
+
+    <div class="box box-en" style="margin-top:10px"><h4>英文怎麼讀</h4>
+      <ul style="margin:0">
+        <li><b>directed numbers</b> 有向數（帶正負號的數）</li>
+        <li><b>How many directed numbers are there?</b> 式中共有多少個有向數？</li>
+        <li><b>Consider the following expression</b> 考慮以下算式 &nbsp;·&nbsp; <b>Find the value of</b> 求……的值</li>
+        <li><b>+ … +</b> 讀作 <em>and so on</em>（依此類推）</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<!-- ================= 4. VOCAB ================= -->
+<section id="vocab">
+  <div class="sec-head"><span class="sec-num">04</span><h2>英文表達庫 · English Expression Bank</h2></div>
+  <p class="sec-desc">英文基礎薄弱最大的殺傷力，在「看不懂題目」和「寫不出答案」。以下是你這份卷子暴露出來、未來一年會一直用到的表達。建議<b>每天大聲朗讀 10 個</b>，一週一循環。</p>
+
+  <h3>A. 數與數系 · Numbers</h3>
+  <div class="vgrid">
+    <div class="v"><b>natural number</b><span>自然數（1, 2, 3, …）</span></div>
+    <div class="v"><b>whole number</b><span>整數（0, 1, 2, …）</span></div>
+    <div class="v"><b>integer</b><span>整數（含負數）</span></div>
+    <div class="v"><b>directed number</b><span>有向數（帶正負號）</span></div>
+    <div class="v"><b>prime number</b><span>質數</span><code>2, 3, 5, 7, 11, 13…</code></div>
+    <div class="v"><b>composite number</b><span>合數</span><code>4, 6, 8, 9, 10…</code></div>
+    <div class="v"><b>factor / divisor</b><span>因數</span></div>
+    <div class="v"><b>multiple</b><span>倍數</span></div>
+    <div class="v"><b>prime factorization</b><span>質因數分解</span></div>
+    <div class="v"><b>index notation</b><span>指數記法</span><code>2⁴</code></div>
+    <div class="v"><b>base</b><span>底數</span></div>
+    <div class="v"><b>index / power / exponent</b><span>指數</span></div>
+    <div class="v"><b>H.C.F. / G.C.F.</b><span>最大公因數 Highest Common Factor</span></div>
+    <div class="v"><b>L.C.M.</b><span>最小公倍數 Least Common Multiple</span></div>
+    <div class="v"><b>divisible by</b><span>能被……整除</span><code>15 is divisible by 3</code></div>
+    <div class="v"><b>opposite number</b><span>相反數</span><code>opposite of −5 is 5</code></div>
+    <div class="v"><b>magnitude</b><span>大小／絕對值</span></div>
+    <div class="v"><b>square / cubed</b><span>平方／立方</span></div>
+    <div class="v"><b>mixed number</b><span>帶分數</span></div>
+    <div class="v"><b>improper fraction</b><span>假分數</span></div>
+    <div class="v"><b>reciprocal</b><span>倒數</span></div>
+    <div class="v"><b>number line</b><span>數線</span></div>
+  </div>
+
+  <h3>B. 運算動詞 · Operations</h3>
+  <div class="vgrid">
+    <div class="v"><b>sum</b><span>和；相加</span><code>the sum of A and B = A+B</code></div>
+    <div class="v"><b>difference</b><span>差</span><code>A−B</code></div>
+    <div class="v"><b>product</b><span>積</span><code>AB</code></div>
+    <div class="v"><b>quotient</b><span>商</span><code>A÷B</code></div>
+    <div class="v"><b>times</b><span>乘以</span><code>8 times x = 8x</code></div>
+    <div class="v"><b>divided by</b><span>除以</span></div>
+    <div class="v"><b>subtract A from B</b><span>從 B 減去 A</span><code>= B − A</code></div>
+    <div class="v"><b>add A to B</b><span>把 A 加到 B</span><code>= B + A</code></div>
+    <div class="v"><b>increased by</b><span>增加了</span><code>x + 5</code></div>
+    <div class="v"><b>decreased by</b><span>減少了</span><code>x − 5</code></div>
+    <div class="v"><b>twice / double</b><span>兩倍</span><code>2x</code></div>
+    <div class="v"><b>half of</b><span>一半</span><code>x/2</code></div>
+    <div class="v"><b>exceeds</b><span>多於</span><code>A exceeds B by 3 → A = B+3</code></div>
+    <div class="v"><b>at most</b><span>最多（≤）</span></div>
+    <div class="v"><b>at least</b><span>至少（≥）</span></div>
+  </div>
+
+  <h3>C. 指令動詞 · Instruction verbs（決定你要「做甚麼」）</h3>
+  <div class="vgrid">
+    <div class="v"><b>Find</b><span>求（算出結果）</span></div>
+    <div class="v"><b>Evaluate</b><span>求值（算出一個數）</span></div>
+    <div class="v"><b>Simplify</b><span>化簡</span></div>
+    <div class="v"><b>Expand</b><span>展開（拆括號）</span></div>
+    <div class="v"><b>Express … in terms of x</b><span>用 x 表示</span></div>
+    <div class="v"><b>Express in index notation</b><span>用指數記法表示</span></div>
+    <div class="v"><b>Explain whether</b><span>解釋是否／是 A 還是 B</span><code>必須寫理由</code></div>
+    <div class="v"><b>Show your working</b><span>寫出計算過程</span><code>不寫沒分</code></div>
+    <div class="v"><b>Hence</b><span>因此（用上小題結果）</span></div>
+    <div class="v"><b>Evaluate the following</b><span>計算下列各題</span></div>
+    <div class="v"><b>Give your answer correct to 3 significant figures</b><span>答案取 3 位有效數字</span></div>
+    <div class="v"><b>all possible values</b><span>所有可能值</span><code>必須找齊</code></div>
+    <div class="v"><b>MUST be true</b><span>必然成立</span><code>找「無論如何都對」的</code></div>
+    <div class="v"><b>NOT</b><span>不是（找例外）</span></div>
+  </div>
+
+  <h3>D. 代數 · Algebra</h3>
+  <div class="vgrid">
+    <div class="v"><b>algebraic expression</b><span>代數式</span></div>
+    <div class="v"><b>term</b><span>項</span></div>
+    <div class="v"><b>like terms</b><span>同類項</span></div>
+    <div class="v"><b>coefficient</b><span>係數</span><code>5x 的係數是 5</code></div>
+    <div class="v"><b>constant</b><span>常數</span></div>
+    <div class="v"><b>consecutive even numbers</b><span>連續偶數</span></div>
+    <div class="v"><b>odd / even</b><span>奇／偶</span></div>
+    <div class="v"><b>positive / negative</b><span>正／負</span></div>
+    <div class="v"><b>in terms of x</b><span>用 x 表示</span></div>
+    <div class="v"><b>substitute</b><span>代入</span></div>
+  </div>
+
+  <h3>E. 寫答案的句型模板 · Sentence frames ⭐ 直接照抄</h3>
+  <div class="frame"><div class="e">The L.C.M. of 30, 45 and 56 is 2520.</div>
+    <div class="c">求 L.C.M. 的標準答句：The L.C.M. of A, B and C is ____.</div></div>
+  <div class="frame"><div class="e">Since 3x + 1 is even, 3x is odd. Therefore, x is an odd number.</div>
+    <div class="c">「因為……所以……」：Since ____, ____. Therefore, ____.</div></div>
+  <div class="frame"><div class="e">As −2 &lt; −1.9, 1 p.m. is colder.</div>
+    <div class="c">比較題：As A &lt; B, ____. （As = 因為）</div></div>
+  <div class="frame"><div class="e">$(500 − 5x − 40y) will be left.</div>
+    <div class="c">應用題結論：____ will be left. / The answer is ____.</div></div>
+  <div class="frame"><div class="e">The maximum number of bags that can be packed is 14.</div>
+    <div class="c">最大／最小：The maximum / minimum number of ____ is ____.</div></div>
+  <div class="frame"><div class="e">There are three possible values of the 5-digit number: 25020, 25425 and 25920.</div>
+    <div class="c">列舉多個答案：There are ____ possible values: A, B and C.</div></div>
+  <div class="frame"><div class="e">Each bag contains 3 red pens, 7 green pens and 11 blue pens.</div>
+    <div class="c">描述每份數量：Each ____ contains ____.</div></div>
+  <div class="frame"><div class="e">Let x be the number of ice-cream cones.</div>
+    <div class="c">設未知數：Let x be the number of ____.</div></div>
+  <div class="frame"><div class="e">The temperature at 4 p.m. is −1.9°C.</div>
+    <div class="c">報告數值：The ____ at ____ is ____.（記得寫單位）</div></div>
+  <div class="frame"><div class="e">There are 27 pairs, and each pair equals 2. So the value is −11 + 27 × 2 = 43.</div>
+    <div class="c">分組求和：There are ____ groups, and each group equals ____.</div></div>
+</section>
+
+<!-- ================= 5. SKILLS ================= -->
+<section id="skills">
+  <div class="sec-head"><span class="sec-num">05</span><h2>接下來要掌握的知識點 · Skills to Master Next</h2></div>
+  <p class="sec-desc">這份卷子考的是 S1 上學期：<b>基礎數論 + 有向數 + 代數式入門</b>。以下是依「由這份卷子暴露的弱點」排出的優先次序。打 ★ 的是<u>這一兩週就要搞定</u>的。</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4 style="color:#a3302a">★ 第一優先 · 立即補（1–2 週）</h4>
+      <ol style="margin:0;padding-left:1.2em;font-size:14.5px;line-height:1.9">
+        <li><b>指數的意義</b>：aⁿ = a 自乘 n 次。背 2¹–2¹⁰、3¹–3⁵、平方數 1–20。</li>
+        <li><b>質因數分解完整化</b>：結果只能是質數；不能有 1；乘回去要等於原數；奇數無因數 2。</li>
+        <li><b>整除性檢定</b>：2、3、5、9、10（及 4、8）。</li>
+        <li><b>H.C.F. / L.C.M. 用指數形式求法</b>：HCF 取共同、指數小；LCM 取全部、指數大。</li>
+        <li><b>HCF / LCM 應用題的關鍵詞判斷</b>（見第 ③ 節 Q26 的表，一定要背熟）。</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h4 style="color:#a86f18">第二優先 · 2–4 週</h4>
+      <ol style="margin:0;padding-left:1.2em;font-size:14.5px;line-height:1.9">
+        <li><b>有向數四則</b>：減負＝加正；負負得正；(−2)³ vs −2² 的分別。</li>
+        <li><b>四則運算次序</b>：括號由內到外 → 次方 → 乘除（左至右）→ 加減（左至右）。</li>
+        <li><b>分數四則</b>：通分、乘以倒數、帶分數↔假分數。</li>
+        <li><b>代數式化簡</b>：同類項合併；括號前有負號要全變號；單項式乘除。</li>
+        <li><b>文字題 → 代數式</b>：20 個關鍵句型（第 ④ 節）。</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h4 style="color:#25536f">第三優先 · 4–6 週（下學期預備）</h4>
+      <ol style="margin:0;padding-left:1.2em;font-size:14.5px;line-height:1.9">
+        <li><b>指數律</b>：aᵐ × aⁿ = aᵐ⁺ⁿ；aᵐ ÷ aⁿ = aᵐ⁻ⁿ；(aᵐ)ⁿ = aᵐⁿ。</li>
+        <li><b>多項式加減乘</b>：展開 a(b + c) = ab + ac。</li>
+        <li><b>等差數列</b>：項數公式、第 n 項、分組求和。</li>
+        <li><b>「找所有可能值」的系統列舉</b>：分情況討論，一個都不能漏。</li>
+        <li><b>推理與論證用語</b>：Since / Therefore / Hence / It is given that。</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h4 style="color:#26624a">★ 橫貫全年的「元能力」</h4>
+      <ol style="margin:0;padding-left:1.2em;font-size:14.5px;line-height:1.9">
+        <li><b>驗算習慣</b>：乘回去驗除、代入驗化簡、用小數字驗公式。</li>
+        <li><b>估算能力</b>：1500 ÷ (−15) 大約是多少？先估再算，就能發現 10 vs 100。</li>
+        <li><b>答案定位</b>：答案要寫在指定位置，只寫一個最終答案。</li>
+        <li><b>單位意識</b>：$、°C、枝、袋、cm —— 沒有單位就是扣分。</li>
+        <li><b>用途辨識</b>：題目問甚麼，答案就要回答甚麼。</li>
+      </ol>
+    </div>
+  </div>
+
+  <h3>你「已掌握」的清單 · What you already do well</h3>
+  <div class="callout tip">
+    <b>不要再覺得自己數學差</b>
+    這份卷子證明你已經會：
+    <ul style="margin:6px 0 0">
+      <li>✅ 有向數的加減與比大小（Q24 滿分）</li>
+      <li>✅ 三位數以內的四則混合運算方向（Q20(b) 方法分全對，只是尾數算錯）</li>
+      <li>✅ 代數式的同類項合併思路（Q21(b)、Q22(a)）</li>
+      <li>✅ 應用題的「逐步列式」能力（Q25、Q24）</li>
+      <li>✅ 從題目找出規律（Q29(b)(ii) 你補寫的 43 是對的）</li>
+    </ul>
+    <p style="margin:8px 0 0">你的問題<strong>不是「不會」，而是「不熟練」＋「寫得不規範」</strong>。這兩件事，練習就能解決。</p>
+  </div>
+
+  <h3>核心公式與表格速查卡 · Quick reference card</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>數論 Number theory</h4>
+      <div class="calc">H.C.F. = 共同質因數，指數取 <b>小</b>
+L.C.M. = 全部質因數，指數取 <b>大</b>
+
+整除性：
+ 2 末位偶          5 末位 0/5        10 末位 0
+ 3 數字和 div 3    9 數字和 div 9
+ 4 末兩位 div 4    8 末三位 div 8
+ 6 同時 div 2 和 3</div>
+    </div>
+    <div class="card">
+      <h4>運算與代數 Operations</h4>
+      <div class="calc">a − (−b) = a + b
+a + (−b) = a − b
+(−)×(−) = (+)   (−)×(+) = (−)
+(−a)ⁿ ：n 奇 → 負；n 偶 → 正
+−a² = −(a²)：先算次方，再加負號
+
+a ÷ b = a/b（寫成分數）
+a/b ± c/d = (ad ± bc)/(bd)
+a/b ÷ c/d = a/b × d/c
+
+同類項：3x + 5x = 8x    3x × 5x = 15x²</div>
+    </div>
+    <div class="card">
+      <h4>等差數列 Sequences</h4>
+      <div class="calc">項數 = (末項 − 首項) ÷ 公差 + 1
+第 n 項 = 首項 + (n − 1) × 公差
+公差 = 後項 − 前項
+
+驗證法：用小數字（1 到 10）測試公式對不對</div>
+    </div>
+    <div class="card">
+      <h4>連續數 Consecutive</h4>
+      <div class="calc">連續整數：n, n+1, n+2
+連續偶數：n, n+2, n+4
+連續奇數：n, n+2, n+4
+
+⚠ 偶／奇數相差 <b>2</b>，整數相差 <b>1</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. PLAN ================= -->
+<section id="plan">
+  <div class="sec-head"><span class="sec-num">06</span><h2>六週補底計劃 · 6-Week Recovery Plan</h2></div>
+  <p class="sec-desc">目標：期末考由 38 分 → <b>65 分以上</b>。每天 <b>20 分鐘</b>，週末 <b>40 分鐘</b>。勾選會自動記錄在你的瀏覽器裡。</p>
+
+  <div class="grid3">
+    <div class="rule-card">
+      <div class="n">W1</div>
+      <h4 style="margin-bottom:8px">數論地基</h4>
+      <p style="font-size:14px;margin:0">
+      每天：背 2 的次方 + 做 10 題質因數分解<br>
+      週末：HCF / LCM 混合 15 題<br>
+      <b>達標：</b>任意 3 個數能在 60 秒內完成質因數分解並求出 HCF、LCM。
+      </p>
+    </div>
+    <div class="rule-card">
+      <div class="n">W2</div>
+      <h4 style="margin-bottom:8px">整除性與應用題</h4>
+      <p style="font-size:14px;margin:0">
+      每天：5 題整除性判斷（2,3,4,5,8,9,10）<br>
+      週末：10 題「分包／切割」應用題，練習辨認 HCF vs LCM<br>
+      <b>達標：</b>看到題目關鍵詞能立刻判斷用 HCF 還是 LCM。
+      </p>
+    </div>
+    <div class="rule-card">
+      <div class="n">W3</div>
+      <h4 style="margin-bottom:8px">有向數與次序</h4>
+      <p style="font-size:14px;margin:0">
+      每天：8 題有向數四則（含括號、次方）<br>
+      週末：20 題混合運算，強制「先估後算」<br>
+      <b>達標：</b>(−2)³、−2⁴ 不會再混淆；1500÷(−15) 這類錯誤不再出現。
+      </p>
+    </div>
+    <div class="rule-card">
+      <div class="n">W4</div>
+      <h4 style="margin-bottom:8px">分數運算</h4>
+      <p style="font-size:14px;margin:0">
+      每天：6 題分數加減乘除（含帶分數）<br>
+      週末：10 題代數式分數化簡<br>
+      <b>達標：</b>「分子分母不能各自加減」變成本能。
+      </p>
+    </div>
+    <div class="rule-card">
+      <div class="n">W5</div>
+      <h4 style="margin-bottom:8px">代數式與文字題</h4>
+      <p style="font-size:14px;margin:0">
+      每天：5 題「英文句子 → 代數式」，大聲讀出來<br>
+      週末：完整寫 3 題應用題（設未知數 → 列式 → 單位 → 英文答案句）<br>
+      <b>達標：</b>第 ④ 節 E 的 10 個句型能默寫。
+      </p>
+    </div>
+    <div class="rule-card">
+      <div class="n">W6</div>
+      <h4 style="margin-bottom:8px">整合與模擬</h4>
+      <p style="font-size:14px;margin:0">
+      重做這份卷（計時 90 分鐘，不看答案）<br>
+      再重做一次錯題<br>
+      <b>達標：</b>同一份卷 ≥ 75 分，而且「書寫規範」不再扣分。
+      </p>
+    </div>
+  </div>
+
+  <h3>每日 20 分鐘流程（照做即可）</h3>
+  <div class="card">
+    <div class="calc">00–03 分  背誦：指數表 / 公式卡（大聲唸出來）
+03–13 分  練習：10 題當週主題（限時，不查書）
+13–17 分  對答案：錯的題目在旁邊寫「為甚麼錯」一句
+17–20 分  朗讀：讀 3 條英文題目，圈出動詞與關鍵詞</div>
+    <p style="margin:10px 0 0;font-size:14px"><b>關鍵原則：</b>每天 20 分鐘 × 42 天 &gt; 考前一晚 6 小時。數學是「肌肉記憶」，靠的是頻率不是時長。</p>
+  </div>
+
+  <h3>每日任務勾選表 · Daily tracker</h3>
+  <p class="dim">做完就打勾（會儲存在這台電腦／手機的瀏覽器裡，換裝置不會同步）。</p>
+  <div id="tracker"></div>
+</section>
+
+<!-- ================= 7. EXAM RULE ================= -->
+<section id="examrule">
+  <div class="sec-head"><span class="sec-num">07</span><h2>答題規範與檢查表 · Exam Technique</h2></div>
+  <p class="sec-desc">這一節是你<strong>最快能加 10 分</strong>的地方。全部照做，下份卷立刻看到效果。</p>
+
+  <div class="grid2">
+    <div class="rule-card">
+      <div class="n">01</div>
+      <h4>答案寫在指定位置</h4>
+      <p style="font-size:14px;margin:0">每一題都有指定的橫線／方格。答案<strong>只能寫在那裡</strong>。草稿寫在頁邊空白處並用線隔開，或寫在草稿紙上。</p>
+      <p style="font-size:13.5px;margin:8px 0 0;color:#a3302a"><b>本卷代價：</b>Q18、Q19、Q23、Q26、Q27 —— 約 12 分。</p>
+    </div>
+    <div class="rule-card">
+      <div class="n">02</div>
+      <h4>一題只寫一個最終答案</h4>
+      <p style="font-size:14px;margin:0">寫錯了不要緊，<strong>用一條線劃掉</strong>，然後在答案線上重寫。不要讓兩個答案同時出現在卷面上——老師只會看最明顯的那個。</p>
+      <p style="font-size:13.5px;margin:8px 0 0;color:#a3302a"><b>本卷代價：</b>Q27（8 分全失）。</p>
+    </div>
+    <div class="rule-card">
+      <div class="n">03</div>
+      <h4>係數在前、字母在後</h4>
+      <p style="font-size:14px;margin:0"><b>5x</b> ✓ &nbsp; <b>x5</b> ✗ &nbsp;|&nbsp; <b>40y</b> ✓ &nbsp; <b>y40</b> ✗ &nbsp;|&nbsp; <b>2a²</b> ✓ &nbsp; <b>a²2</b> ✗</p>
+      <p style="font-size:13.5px;margin:8px 0 0;color:#a3302a"><b>本卷代價：</b>Q25 的答案分。</p>
+    </div>
+    <div class="rule-card">
+      <div class="n">04</div>
+      <h4>單位一定要寫</h4>
+      <p style="font-size:14px;margin:0">$ · °C · cm · 枝 · 袋 · 分鐘。單位寫法：<b>$(500 − 5x − 40y)</b> 或 <b>−1.9°C</b>。</p>
+      <p style="font-size:13.5px;margin:8px 0 0;color:#a3302a"><b>本卷代價：</b>Q25。</p>
+    </div>
+    <div class="rule-card">
+      <div class="n">05</div>
+      <h4>題目問甚麼，就答甚麼</h4>
+      <p style="font-size:14px;margin:0">問 <em>how many bags</em> → 答「14 袋」；問 <em>which is colder</em> → 答「1 p.m.」；問 <em>all possible values</em> → 全部列出。答完回頭讀一次題目最後一行。</p>
+    </div>
+    <div class="rule-card">
+      <div class="n">06</div>
+      <h4>過程分比答案分多</h4>
+      <p style="font-size:14px;margin:0">數學卷大部分分數是「方法分 (M mark)」。即使答案錯，<strong>寫對的步驟仍然有分</strong>。所以：永遠不要交白卷，把懂的步驟先寫出來。</p>
+      <p style="font-size:13.5px;margin:8px 0 0;color:#26624a"><b>本卷證據：</b>Q20 拿到了 2 分方法分。</p>
+    </div>
+  </div>
+
+  <h3>交卷前 5 分鐘檢查清單 · Final 5-minute check</h3>
+  <div class="card">
+    <div class="calc">□ 每一題的答案都寫在指定橫線／方格上了嗎？
+□ 卷面上有沒有「兩個答案」同時存在？
+□ 所有應用題都有寫單位嗎？
+□ 每一題都回答了「題目問的東西」嗎？
+□ 有沒有哪一頁是空白、但其實會做的？（翻一遍）
+□ 負號、指數、小數點，有沒有抄錯？
+□ 分數答案是「最簡形式」嗎？
+□ 標題有寫「END OF PAPER」的，後面還有題目嗎？</div>
+  </div>
+
+  <h3>草稿怎麼寫 · How to use rough work</h3>
+  <div class="calc">✗ 錯：在答案線旁邊東寫一句西寫一句，跟正式答案混在一起
+✓ 對：
+   ① 在題目頁的邊緣空白處寫，前面標「Rough」
+   ② 或使用卷末的空白頁，寫上題號
+   ③ 草稿錯了就整行劃掉，不要在草稿上「續寫正確答案」
+   ④ 正式答案 = 一條清楚的算式鏈，每步一行，等號對齊</div>
+</section>
+
+<!-- ================= 8. EXTRA ================= -->
+<section id="extra">
+  <div class="sec-head"><span class="sec-num">08</span><h2>額外建議 · Beyond the Paper</h2></div>
+  <p class="sec-desc">除了補數學，這幾件事會讓你「一年後的自己」感謝現在的自己。</p>
+
+  <h3>① 建立錯題本 · The error notebook（最重要）</h3>
+  <div class="card">
+    <p style="margin:0 0 10px;font-size:14.5px">買一本 A4 橫線筆記，每頁只放 <b>1 題</b>，分成三欄：</p>
+    <div class="tbl-scroll">
+    <table>
+      <thead><tr><th style="width:34%">① 原題 + 我的錯</th><th style="width:33%">② 為甚麼錯（一句話）</th><th style="width:33%">③ 正確做法 + 新學的表達</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="calc" style="font-size:13px">5³ − 10² − 2⁴</div></td>
+          <td>把 5³ 當成 5×15，<b>以為指數是乘</b>。</td>
+          <td><div class="calc" style="font-size:13px">125 − 100 − 16 = 9 = 3²
+index notation = 指數記法</div></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="margin:10px 0 0;font-size:14px"><b>用法：</b>每週日把當週的錯題本重看一次，<u>遮住第 ③ 欄重做</u>。做對就打一個紅勾，連對兩次可以「畢業」（撕掉那頁）。</p>
+  </div>
+
+  <h3>② 每日 60 秒「數學心算」</h3>
+  <div class="card">
+    <div class="calc">每天早上花 60 秒，出聲唸出：
+  2¹=2  2²=4  2³=8  2⁴=16  2⁵=32  2⁶=64  2⁷=128  2⁸=256
+  3²=9  3³=27 3⁴=81     4²=16 4³=64    5³=125
+  7×8=56   9×9=81   12×12=144   15×15=225</div>
+    <p style="margin:10px 0 0;font-size:14px">這份卷子裡 5³、2⁴、45 的分解、1500÷15 全部是「基本事實」型的錯誤。心算熟了，這些分數自動拿回來。</p>
+  </div>
+
+  <h3>③ 用「費曼法」講題 · Explain it out loud</h3>
+  <div class="card">
+    <p style="margin:0;font-size:14.5px">
+    每週挑 <b>1 題</b>，用手機錄音，用<u>中英混合</u>講 60 秒：<br>
+    「這題在問 <em>find the L.C.M.</em>，所以我要先做 <em>prime factorization</em>……
+     45 是奇數，所以不可能有因數 2，我這裡錯了……最後答案是 <em>2520</em>。」<br><br>
+    <b>為甚麼有效：</b>講得出來 = 真的懂。講到卡住的地方，就是你還沒懂的地方。順便練了英文表達。
+    </p>
+  </div>
+
+  <h3>④ 一頁紙公式卡 · One-page formula card</h3>
+  <div class="card">
+    <p style="margin:0;font-size:14.5px">把第 ⑤ 節的「速查卡」抄成一張 A5 卡，貼在書桌前。<b>不要抄在 iPad 裡</b>——手抄的過程本身就是記憶。<br>
+    內容只放：指數表、整除性、HCF/LCM 口訣、次方符號規律、等差項數公式、10 個英文句型。</p>
+  </div>
+
+  <h3>⑤ 想問老師的問題清單（可以直接拿去問）</h3>
+  <div class="card">
+    <ol style="margin:0;padding-left:1.2em;font-size:14.5px;line-height:1.95">
+      <li>老師，第 27 題我右邊寫的答案是對的，為甚麼 0 分？如果重寫在橫線上，可以怎樣拿分？</li>
+      <li>第 20 題 (b) 我拿到 2 分方法分，想確認「1500 ÷ (−15)」那一步扣了甚麼分？</li>
+      <li>第 22 題 (a) 我寫 <span class="math">2a² + (−2b)</span>，為甚麼要寫成 <span class="math">2a² − 2b</span> 才有答案分？</li>
+      <li>第 28 題「find <b>all</b> possible values」，如果我列舉時漏一個個案但答案寫齊了，會怎樣評分？</li>
+      <li>下學期會學甚麼？我應該先預習哪幾課？</li>
+      <li>我可以在哪裡找到多一些「英文文字題」的練習？</li>
+    </ol>
+    <p style="margin:10px 0 0;font-size:14px"><b>提醒：</b>問問題時把卷子帶上並指著具體位置。老師最欣賞「知道自己錯在哪」的學生。</p>
+  </div>
+
+  <h3>⑥ 家長可以怎麼幫（給父母的 3 句話）</h3>
+  <div class="card">
+    <ol style="margin:0;padding-left:1.2em;font-size:14.5px;line-height:1.9">
+      <li><b>不要只看分數。</b>這份卷有 12 分是「寫錯位置」丟的，孩子其實會做。先肯定他 Q24 拿滿分。</li>
+      <li><b>每天問一句「今天背了哪個表？」</b>而不是「做完功課沒有？」。</li>
+      <li><b>幫忙計時。</b>每天 20 分鐘的練習，家長負責按計時器、不負責教——不會的題目拍照傳給老師。</li>
+    </ol>
+  </div>
+
+  <h3>⑦ 下學期預習路線 · What comes next</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>單元 Unit</th><th>英文名稱</th><th>與本次考試的關係</th></tr></thead>
+    <tbody>
+      <tr><td>指數律</td><td>Laws of Indices</td><td>Q19、Q20 的延伸；aᵐ×aⁿ 一定要熟</td></tr>
+      <tr><td>多項式</td><td>Polynomials</td><td>Q21–Q23 的延伸；展開與因式分解</td></tr>
+      <tr><td>一元一次方程</td><td>Linear Equations in One Unknown</td><td>Q25 那類應用題的「升級版」</td></tr>
+      <tr><td>百分數</td><td>Percentages</td><td>應用題＋單位，考驗讀題</td></tr>
+      <tr><td>角與直線</td><td>Angles and Straight Lines</td><td>開始需要寫「因為……所以……」的幾何證明</td></tr>
+      <tr><td>面積與體積</td><td>Area and Volume</td><td>公式 + 單位，Q25 的單位意識會派上用場</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ================= 9. QUIZ ================= -->
+<section id="quiz">
+  <div class="sec-head"><span class="sec-num">09</span><h2>自測 20 題 · Self-check Quiz</h2></div>
+  <p class="sec-desc">全部出自這份卷子的知識點。做完看分數：<b>16 題以上</b>＝可以開始做難題；<b>12–15 題</b>＝再溫一輪第 ⑤ 節；<b>12 題以下</b>＝回第 ⑥ 節 W1–W2 重做。</p>
+
+  <div class="quiz">
+    <div class="quiz-top">
+      <div class="qscore">第 <b id="qidx">1</b> / 20 題 &nbsp;·&nbsp; 得分 <b id="qsc">0</b></div>
+      <div style="display:flex;gap:8px">
+        <button class="btn ghost" id="qreset">重新開始</button>
+      </div>
+    </div>
+    <div class="qbody">
+      <p class="stem" id="qstem"></p>
+      <p class="stemzh" id="qzh"></p>
+      <div class="choices" id="qchoices"></div>
+      <div class="fb" id="qfb"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0 0 8px"><b>報告說明 · About this report</b></p>
+    <p style="margin:0 0 6px">
+      本報告依據「T.W.G.Hs Sun Hoi Directors' College · Secondary One Mathematics · First Term Test 2026–2027」
+      卷面影印本逐頁分析而成。影印本缺原卷第 4 頁（Q12–Q16），該部分未包含在內；Section A 的答案紙未隨卷附上，
+      其分數為按總分倒推的估計值。
+    </p>
+    <p style="margin:0 0 6px">
+      All solutions are worked out step by step in English with Chinese explanations, designed for a student
+      whose first language is Chinese and who is still building English Mathematical vocabulary.
+    </p>
+    <p style="margin:0;color:#a8a196">祝下一次考試進步 30 分 · Aim for 68+ next time.</p>
+  </div>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- nav highlight ---------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav.toc a'));
+  var secs = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  function onScroll(){
+    var y = window.scrollY + 120, idx = 0;
+    for (var i = 0; i < secs.length; i++){
+      if (secs[i] && secs[i].offsetTop <= y) idx = i;
+    }
+    links.forEach(function(a, i){ a.classList.toggle('on', i === idx); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- question filter ---------- */
+  var chips = Array.prototype.slice.call(document.querySelectorAll('#filterbar .chip'));
+  var qs = Array.prototype.slice.call(document.querySelectorAll('#paper .q'));
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.classList.remove('on'); });
+      c.classList.add('on');
+      var f = c.getAttribute('data-f');
+      qs.forEach(function(q){
+        q.classList.toggle('hide', !(f === 'all' || q.getAttribute('data-status') === f));
+      });
+    });
+  });
+
+  /* ---------- weekly tracker ---------- */
+  var tracker = document.getElementById('tracker');
+  var KEY = 's1maths2026.tracker';
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){ saved = {}; }
+  var weekNames = ['W1 數論地基','W2 整除性與應用題','W3 有向數與次序','W4 分數運算','W5 代數式與文字題','W6 整合與模擬'];
+  var html = '';
+  for (var w = 0; w < 6; w++){
+    html += '<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px">';
+    html += '<span style="font-size:13.5px;min-width:150px;color:#46586a">' + weekNames[w] + '</span>';
+    for (var d = 1; d <= 7; d++){
+      var id = 'w' + (w+1) + 'd' + d;
+      var on = saved[id] ? ' style="background:#26624a;color:#fff;border-color:#26624a"' : '';
+      html += '<button class="chip day" data-id="' + id + '"' + on + '>Day ' + d + '</button>';
+    }
+    html += '</div>';
+  }
+  tracker.innerHTML = html;
+  tracker.addEventListener('click', function(e){
+    var b = e.target.closest('.day');
+    if (!b) return;
+    var id = b.getAttribute('data-id');
+    var isOn = b.style.background && b.style.background.indexOf('38, 98, 74') > -1;
+    if (isOn){
+      b.style.background = ''; b.style.color = ''; b.style.borderColor = '';
+      delete saved[id];
+    } else {
+      b.style.background = '#26624a'; b.style.color = '#fff'; b.style.borderColor = '#26624a';
+      saved[id] = 1;
+    }
+    try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch(err){}
+  });
+
+  /* ---------- quiz ---------- */
+  var data = [
+    { s: '5³ = ?', z: '指數 = 底數自己乘自己幾次', c: ['15','125','53','25'], a: 1, e: '5³ = 5 × 5 × 5 = 125。（不是 5 × 3）' },
+    { s: '2⁴ = ?', z: '四個 2 相乘', c: ['8','16','24','32'], a: 1, e: '2⁴ = 2 × 2 × 2 × 2 = 16。（不是 2 × 4 = 8）' },
+    { s: '−2² = ?', z: '注意負號在括號外', c: ['4','−4','2','−2'], a: 1, e: '−2² = −(2²) = −4。但 (−2)² = +4。位置不同，答案不同！' },
+    { s: '(−2)³ = ?', z: '三個負號相乘', c: ['−6','6','−8','8'], a: 2, e: '(−2)(−2)(−2) = 4 × (−2) = −8。奇數個負號 → 結果為負。' },
+    { s: 'The prime factorization of 45 is', z: '45 的質因數分解（45 是奇數！）', c: ['3 × 15','3² × 5','2 × 3 × 5','45'], a: 1, e: '45 = 3 × 15 = 3 × 3 × 5 = 3² × 5。45 是奇數，不可能含因數 2。' },
+    { s: 'The H.C.F. of 12 and 18 is', z: '最大公因數', c: ['2','3','6','36'], a: 2, e: '12 = 2²×3，18 = 2×3²。取共同、指數小 → 2×3 = 6。（36 是 L.C.M.）' },
+    { s: 'The L.C.M. of 4, 6 and 9 is', z: '最小公倍數', c: ['18','36','72','216'], a: 1, e: '4=2²，6=2×3，9=3²。取全部、指數大 → 2²×3² = 4×9 = 36。' },
+    { s: 'Is 64 890 divisible by 8?', z: '看末三位：890 ÷ 8', c: ['Yes','No'], a: 1, e: '末三位 890，890 ÷ 8 = 111.25，不是整數 → 不能整除。' },
+    { s: '(−13) − (−15) = ?', z: '減負數 = 加正數', c: ['−28','2','−2','28'], a: 1, e: '−13 + 15 = 2。' },
+    { s: '1500 ÷ (−15) = ?', z: '先算 1500 ÷ 15', c: ['−10','−100','100','10'], a: 1, e: '15 × 100 = 1500，所以 1500 ÷ 15 = 100，前面加負號 → −100。' },
+    { s: '5³ + (−2)² = ?', z: '分別算兩個次方', c: ['129','121','133','117'], a: 0, e: '125 + 4 = 129。（(−2)² = +4）' },
+    { s: 'Simplify: 5x − 9x + 2', z: '合併同類項', c: ['−4x + 2','4x + 2','−4x − 2','−14x'], a: 0, e: '5x − 9x = −4x，常數 +2 單獨留下 → −4x + 2。' },
+    { s: 'Simplify: 2a/5 + a/5', z: '同分母相加', c: ['3a/5','3a/10','2a/10','3a'], a: 0, e: '同分母相加，分母不變：(2a + a)/5 = 3a/5。' },
+    { s: '"Subtract 7 from x" means', z: 'from 後面才是被減數', c: ['7 − x','x − 7','7x','x/7'], a: 1, e: 'subtract 7 <b>from</b> x = 從 x 減去 7 = x − 7。' },
+    { s: '"the product of 3 and the sum of a and b" means', z: '先有和的括號，再乘 3', c: ['3a + b','3(a + b)','a + 3b','3ab'], a: 1, e: 'the sum of a and b = (a+b)，3 times that = 3(a+b)。' },
+    { s: 'Which of the following is a prime number?', z: '只有 1 和自己是因數', c: ['51','57','61','91'], a: 2, e: '51 = 3×17，57 = 3×19，91 = 7×13，只有 61 是質數。' },
+    { s: '"At most how many bags can be packed?" → which to use?', z: '「平分得最多」用哪個？', c: ['H.C.F.','L.C.M.','Sum','Product'], a: 0, e: '分得最多、每份一樣 → 最大公因數 H.C.F.。「一起發生／再次相遇」才用 L.C.M.。' },
+    { s: 'The opposite number of −7 is', z: '相反數只是變號', c: ['−7','7','0','1/7'], a: 1, e: '相反數 (opposite number) 只改正負號 → 7。' },
+    { s: '|−9| = ?', z: '絕對值 / magnitude', c: ['−9','9','0','81'], a: 1, e: '絕對值是不計正負的大小 → 9。' },
+    { s: 'How many odd numbers are there from 11 to 19?', z: '項數 = (末−首)÷2 + 1', c: ['4','5','6','9'], a: 1, e: '11,13,15,17,19 共 5 個。(19−11) ÷ 2 + 1 = 5。忘了 +1 就會答 4。' }
+  ];
+
+  var idx = 0, score = 0, answered = false;
+  var elStem = document.getElementById('qstem');
+  var elZh = document.getElementById('qzh');
+  var elCh = document.getElementById('qchoices');
+  var elFb = document.getElementById('qfb');
+  var elIdx = document.getElementById('qidx');
+  var elSc = document.getElementById('qsc');
+
+  function render(){
+    if (idx >= data.length){ renderEnd(); return; }
+    answered = false;
+    var d = data[idx];
+    elIdx.textContent = String(idx + 1);
+    elSc.textContent = String(score);
+    elStem.innerHTML = d.s;
+    elZh.textContent = d.z;
+    elFb.className = 'fb';
+    elFb.innerHTML = '';
+    elCh.innerHTML = '';
+    d.c.forEach(function(txt, i){
+      var b = document.createElement('button');
+      b.className = 'choice';
+      b.textContent = String.fromCharCode(65 + i) + '.  ' + txt;
+      b.onclick = function(){ pick(i, b); };
+      elCh.appendChild(b);
+    });
+  }
+
+  function pick(i, btn){
+    if (answered) return;
+    answered = true;
+    var d = data[idx];
+    var btns = Array.prototype.slice.call(elCh.querySelectorAll('.choice'));
+    btns.forEach(function(b, k){
+      b.disabled = true;
+      if (k === d.a) b.classList.add('right');
+      if (k === i && i !== d.a) b.classList.add('wrong');
+    });
+    if (i === d.a){ score++; elSc.textContent = String(score); }
+    elFb.className = 'fb show ' + (i === d.a ? 'ok' : 'no');
+    elFb.innerHTML = (i === d.a ? '<b>✓ 正確！</b> ' : '<b>✗ 再想想：</b> ') + d.e;
+    var nb = document.createElement('button');
+    nb.className = 'btn';
+    nb.style.marginTop = '10px';
+    nb.textContent = (idx === data.length - 1) ? '看結果 See result' : '下一題 Next';
+    nb.onclick = function(){ idx++; render(); };
+    elFb.appendChild(document.createElement('br'));
+    elFb.appendChild(nb);
+  }
+
+  function renderEnd(){
+    var msg, col;
+    if (score >= 16){ msg = '很棒！這 20 題的知識點你已經掌握了，可以開始挑戰難題。'; col = '#26624a'; }
+    else if (score >= 12){ msg = '基礎不錯。把第 ⑤ 節的速查卡再溫一輪，錯的題目抄進錯題本。'; col = '#a86f18'; }
+    else { msg = '別灰心 —— 這代表第 ⑥ 節的 W1、W2 正是你要重做的部分。先從指數表和質因數分解開始。'; col = '#a3302a'; }
+    elIdx.textContent = '20';
+    elCh.innerHTML = '';
+    elStem.innerHTML = '測驗完成 · Finished';
+    elZh.textContent = '';
+    elFb.className = 'fb show ' + (score >= 12 ? 'ok' : 'no');
+    elFb.innerHTML = '<div style="font-family:var(--serif);font-size:26px;margin-bottom:6px;color:' + col + '">' +
+                     score + ' / 20</div><div>' + msg + '</div>';
+    var nb = document.createElement('button');
+    nb.className = 'btn';
+    nb.style.marginTop = '14px';
+    nb.textContent = '再試一次 Try again';
+    nb.onclick = function(){ idx = 0; score = 0; render(); };
+    elFb.appendChild(nb);
+  }
+
+  document.getElementById('qreset').onclick = function(){ idx = 0; score = 0; render(); };
+  render();
+})();
+</script>
+</body>
+</html>
